@@ -2,57 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minimal Watch Store | Case Study</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../project.css">
 </head>
 <body>
-  <!-- Navbar (reuse same) -->
-  <nav class="navbar">
-    <a href="../index.html" class="logo">I N N O V A</a>
-  </nav>
-
-  <!-- Hero -->
-  <header class="project-hero">
-    <img src="../images/watch-store.jpeg" alt="Watch Store">
-    <div class="overlay">
-      <h1>Minimal Watch Store</h1>
-      <p>Elegant UI design focusing on user experience and luxury presentation.</p>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="dot"></span>Tina Asadi</div>
+      <nav class="menu">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#certifications">Certifications</a>
+        <a href="../index.html#contact" class="btn">Contact</a>
+        <button id="themeToggle" class="btn">🌓</button>
+      </nav>
     </div>
   </header>
 
-  <!-- Case Study Content -->
-  <main class="container">
-    <section>
-      <h2>Overview</h2>
-      <p>This project was designed to highlight luxury watches with a minimal and elegant interface...</p>
-    </section>
+  <!-- Hero -->
+  <section class="case-hero container">
+    <h1>
+      <span class="highlight-primary">Minimal</span>
+      <span class="highlight-secondary">Watch Store</span>
+    </h1>
+    <div class="case-meta">
+      <div class="skills">
+        <span class="chip">UI/UX</span>
+        <span class="chip">Figma</span>
+        <span class="chip">High Fidelity</span>
+      </div>
+      <div class="info">
+        <span><strong>Duration:</strong> 1 Month</span>
+        <span><strong>Year:</strong> 2024</span>
+        <span><strong>Role:</strong> Designer</span>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="../images/watch-store.jpeg" alt="Watch Store Showcase">
+    </div>
+  </section>
 
-    <section>
-      <h2>UI Kit & Style Guide</h2>
-      <img src="../images/watch-store-ui-kit.png" alt="UI Kit" class="img-fluid">
-    </section>
+  <!-- Problem / Goal / Solution / Outcome -->
+  <section class="case-grid container">
+    <div class="card"><h3>Problem</h3><p>Cluttered ecommerce stores failed to convey luxury and trust.</p></div>
+    <div class="card"><h3>Goal</h3><p>Deliver a minimal yet engaging storefront for a premium feel.</p></div>
+    <div class="card"><h3>Solution</h3><p>Created a design system with clean typography and luxury visuals.</p></div>
+    <div class="card"><h3>Outcome</h3><p>Boosted engagement with a responsive, elegant design.</p></div>
+  </section>
 
-    <section>
-      <h2>Wireframes</h2>
-      <img src="../images/watch-wireframe.png" alt="Wireframes" class="img-fluid">
-    </section>
+  <!-- UI Kit -->
+  <section class="case-ui container">
+    <h2>UI Kit</h2>
+    <img src="../images/watch-store-ui-kit.png" alt="UI Kit">
+  </section>
 
-    <section>
-      <h2>Prototype Video</h2>
-      <video controls width="100%">
-        <source src="../videos/watch-store-demo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </section>
+  <!-- Wireframes -->
+  <section class="case-wireframes container">
+    <h2>Wireframes</h2>
+    <div class="image-grid">
+      <img src="../images/watch-wireframe1.png" alt="Wireframe 1">
+      <img src="../images/watch-wireframe2.png" alt="Wireframe 2">
+    </div>
+  </section>
 
-    <section>
-      <a href="../index.html#projects" class="btn btn-outline-dark">⬅ Back to Projects</a>
-    </section>
-  </main>
+  <!-- Demo Video -->
+  <section class="case-video container">
+    <h2>Demo Video</h2>
+    <video controls width="100%">
+      <source src="../videos/watch-demo.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <!-- Banner CTA -->
+  <section class="case-banner">
+    <div class="container banner-content">
+      <div class="banner-text">
+        <h2>Let’s Build Something <span class="highlight-secondary">Beautiful</span></h2>
+        <a href="../index.html#contact" class="btn-primary">Contact Me</a>
+      </div>
+      <div class="banner-img">
+        <img src="../images/watch-product.jpg" alt="Banner Visual">
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 INNOVA. All Rights Reserved.</p>
+    <p>© <span id="year"></span> Tina Asadi. All rights reserved.</p>
   </footer>
+
+  <script src="../script.js"></script>
 </body>
 </html>
