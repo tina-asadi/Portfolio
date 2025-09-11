@@ -116,3 +116,18 @@ main img {
   border-radius: 8px;
   margin-top: 1rem;
 }
+
+.project a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
