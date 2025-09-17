@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tina Asadi | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <!-- extra CSS only for project scrolling & button overlays (keeps main CSS untouched) -->
+  <link rel="stylesheet" href="projects-extra.css">
 </head>
 <body>
   <!-- Header -->
@@ -18,7 +20,7 @@
         <a href="#experience">Experience</a>
         <a href="#certifications">Certifications</a>
         <a href="#contact" class="btn">Contact</a>
-        <button id="themeToggle" class="btn">🌓</button>
+        <button id="themeToggle" class="btn" aria-label="Toggle theme">🌓</button>
       </nav>
     </div>
   </header>
@@ -30,7 +32,7 @@
       <p class="lead">Web Developer & SEO Specialist passionate about building user-friendly websites and optimizing digital experiences.</p>
       <div class="tags">
         <span class="tag">Front-End</span>
-        <span class="tag">UI/UX</span>
+        <span class="tag">UI Design</span>
         <span class="tag">SEO</span>
       </div>
       <div class="cta">
@@ -84,56 +86,156 @@
   <!-- Projects -->
   <section id="projects" class="container">
     <h2 class="section-title">Projects</h2>
-    
-    <div class="projects">
-      <div class="project">
-        <a href="projects/watch-store.html">
+
+    <h3>🎨 UI Projects</h3>
+    <div class="projects-wrapper">
+      <div class="projects">
+        <div class="project">
           <img src="images/watch-store.jpeg" alt="Minimal Watch Store Design">
           <div class="project-body">
             <h3>Minimal Watch Store</h3>
-            <p>Elegant UI design focusing on user experience and luxury presentation.</p>
+            <p>Website design crafted for both desktop and mobile, with a focus on luxury branding.</p>
             <div class="stack">
               <span class="chip">UI/UX</span>
               <span class="chip">Figma</span>
               <span class="chip">High Fidelity</span>
             </div>
           </div>
-        </a>
-      </div>
+        </div>
 
-      <div class="project">
-        <a href="projects/landing.html">
-          <img src="images/landing.png" alt="Landing Page">
+        <div class="project">
+          <img src="images/landing.png" alt="Juice Landing Page">
           <div class="project-body">
-            <h3>Interactive Landing Page</h3>
-            <p>Responsive landing page with animations and cross-device compatibility.</p>
+            <h3>Juice Landing Page</h3>
+            <p>Interactive landing page designed for a juice brand, optimized for engagement.</p>
+            <div class="stack">
+              <span class="chip">UI/UX</span>
+              <span class="chip">Responsive</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <img src="images/grocery-app-2.png" alt="Grocery App Design">
+          <div class="project-body">
+            <h3>Grocery App</h3>
+            <p>Mobile-first grocery app design with intuitive navigation and cart flow.</p>
+            <div class="stack">
+              <span class="chip">UI</span>
+              <span class="chip">Mobile</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <img src="images/travel-agency.png" alt="Travel Agency Georgia">
+          <div class="project-body">
+            <h3>Travel Agency Website</h3>
+            <p>UI design for a Georgia-based travel agency, responsive for desktop and mobile.</p>
+            <div class="stack">
+              <span class="chip">UI/UX</span>
+              <span class="chip">Responsive</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3>💻 Development Projects</h3>
+    <div class="projects-wrapper">
+      <div class="projects">
+        <div class="project">
+          <img src="images/portfolio.png" alt="Portfolio Website">
+          <div class="project-body">
+            <h3>Portfolio Website</h3>
+            <p>Responsive personal portfolio showcasing my skills, projects, and certifications.</p>
             <div class="stack">
               <span class="chip">HTML</span>
               <span class="chip">CSS</span>
               <span class="chip">JavaScript</span>
             </div>
           </div>
-        </a>
-      </div>
+        </div>
 
-      <div class="project">
-        <a href="projects/multipage.html">
-          <img src="images/multipage.png" alt="Multi-page Website">
+        <div class="project">
+          <img src="images/bilingual-website.png" alt="Bilingual Website">
           <div class="project-body">
-            <h3>Multi-page Website</h3>
-            <p>Three-page bilingual site built with Bootstrap, optimized for accessibility.</p>
+            <h3>Bilingual Website</h3>
+            <p>Fully responsive bilingual website built using Bootstrap.</p>
             <div class="stack">
               <span class="chip">Bootstrap</span>
               <span class="chip">Bilingual</span>
             </div>
           </div>
-        </a>
+        </div>
+
+        <div class="project">
+          <img src="images/travel-plan.png" alt="Travel Plan Razor Project">
+          <div class="project-body">
+            <h3>Travel Plan (Razor)</h3>
+            <p>Travel planning app prototype developed using Razor Pages.</p>
+            <div class="stack">
+              <span class="chip">ASP.NET Razor</span>
+              <span class="chip">Web Dev</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    
-  </section>
+    <h3>🔍 UX & SEO Projects</h3>
+    <div class="projects-wrapper">
+      <div class="projects">
+        <div class="project">
+          <img src="images/cosmetic-userflow.png" alt="Cosmetic Brand User Flow">
+          <div class="project-body">
+            <h3>User Flow – Cosmetic Brand</h3>
+            <p>Suggested improved user flows for a cosmetic brand’s e-commerce site.</p>
+            <div class="stack">
+              <span class="chip">UX</span>
+              <span class="chip">User Flow</span>
+            </div>
+          </div>
+        </div>
 
+        <div class="project">
+          <img src="images/another-userflow.png" alt="Another User Flow">
+          <div class="project-body">
+            <h3>User Flow Design</h3>
+            <p>Redesigned navigation and checkout process to reduce user friction.</p>
+            <div class="stack">
+              <span class="chip">UX</span>
+              <span class="chip">Wireframes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <img src="images/seo-report.png" alt="SEO Report">
+          <div class="project-body">
+            <h3>SEO Report</h3>
+            <p>Detailed SEO audit with actionable recommendations for ranking improvements.</p>
+            <div class="stack">
+              <span class="chip">SEO</span>
+              <span class="chip">Analytics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <img src="images/pillar-cluster.png" alt="Pillar Cluster Strategy">
+          <div class="project-body">
+            <h3>Pillar Cluster SEO</h3>
+            <p>Developed a pillar-cluster content strategy to boost site authority and internal linking.</p>
+            <div class="stack">
+              <span class="chip">SEO</span>
+              <span class="chip">Content Strategy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Experience -->
   <section id="experience" class="container">
@@ -166,7 +268,7 @@
     <div class="contact-card">
       <p>Let’s connect! I’m open to co-op opportunities and collaborations.</p>
       <div class="contact-row">
-        <a href="mailto:tina@example.com" class="btn">Email Me</a>
+        <a href="mailto:asad0019@algonquinlive.com" class="btn">Email Me</a>
         <a href="https://www.linkedin.com/in/tina-asadi-03b472161/" class="btn">LinkedIn</a>
       </div>
     </div>

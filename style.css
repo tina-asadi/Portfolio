@@ -74,6 +74,8 @@ header {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 20%, transparent);
 }
 .menu { display: flex; gap: 1rem; align-items: center; }
+
+/* Header buttons */
 .nav a.btn, 
 #themeToggle.btn {
   padding: .6rem .95rem;
@@ -82,11 +84,12 @@ header {
   background: var(--card);
   color: var(--text);
   box-shadow: var(--shadow);
-  transition: background .25s ease, transform .25s ease, box-shadow .25s ease;
+  transition: background .25s ease, transform .25s ease, box-shadow .25s ease, color .25s ease;
 }
 .nav a.btn:hover,
 #themeToggle.btn:hover {
   background: color-mix(in srgb, var(--card) 80%, var(--brand) 20%);
+  color: var(--text); /* fix: stay readable */
   text-decoration: none;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(0,0,0,.25);
@@ -115,22 +118,29 @@ header {
   color: var(--subtle);
   font-size: .85rem;
 }
+
+/* Buttons */
 .cta { display: flex; gap: .75rem; flex-wrap: wrap; }
+
+/* Primary button (blue solid) */
 .btn-primary {
   background: var(--brand);
   border: none;
-  color: white;
+  color: #fff;
   padding: .75rem 1rem;
   border-radius: 12px;
   font-weight: 600;
   box-shadow: var(--shadow);
-  transition: background .25s ease, transform .25s ease, box-shadow .25s ease;
+  transition: background .25s ease, transform .25s ease, box-shadow .25s ease, color .25s ease;
 }
 .btn-primary:hover {
   background: var(--brand-600);
+  color: #fff; /* fix: keep white text */
   transform: translateY(-2px);
   box-shadow: 0 8px 28px rgba(0,0,0,.35);
 }
+
+/* Ghost button (outline) */
 .btn-ghost {
   background: transparent;
   border: 1px solid var(--border);
@@ -250,9 +260,7 @@ section { padding: 3.5rem 0; border-top: 1px solid var(--border); }
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
   border-color: var(--brand);
 }
-.project:hover img {
-  transform: scale(1.05);
-}
+.project:hover img { transform: scale(1.05); }
 .stack { display: flex; flex-wrap: wrap; gap: .4rem; }
 .chip {
   border: 1px solid var(--border);
@@ -263,6 +271,59 @@ section { padding: 3.5rem 0; border-top: 1px solid var(--border); }
   font-size: .8rem;
 }
 .actions { display: flex; gap: .5rem; margin-top: .2rem; }
+
+#projects h3 {
+  margin: 2rem 0 1rem;
+  font-size: 1.3rem;
+  position: relative;
+  z-index: 1;
+}
+#projects .project-body h3 { margin-top: 0.5rem; }
+
+/* Horizontal scroll for project categories */
+.projects-wrapper {
+  position: relative;
+  padding: 0 4rem; /* space for arrows */
+}
+.projects-wrapper .projects {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+.projects-wrapper .project {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+}
+
+/* Scroll buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--card) 85%, transparent);
+  color: var(--text);
+  font-size: 1.5rem;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: var(--shadow);
+  transition: transform .2s ease, opacity .2s ease;
+}
+.scroll-btn:hover {
+  transform: translateY(-50%) scale(1.05);
+  opacity: 0.9;
+}
+.scroll-btn.left { left: 0; }
+.scroll-btn.right { right: 0; }
+@media (max-width: 640px) { .scroll-btn { display: none; } }
 
 /* Experience */
 .timeline { display: grid; gap: 1rem; }
