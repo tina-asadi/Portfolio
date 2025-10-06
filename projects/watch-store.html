@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Minimal Watch Store | Case Study</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../project.css">
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../project.css" />
 </head>
 <body>
+
   <!-- Header -->
   <header>
     <div class="container nav">
@@ -25,80 +26,248 @@
   </header>
 
   <!-- Hero -->
-  <section class="case-hero container">
-    <h1>
+  <section class="case-hero container" aria-labelledby="hero-title">
+    <h1 id="hero-title">
       <span class="highlight-primary">Minimal</span>
       <span class="highlight-secondary">Watch Store</span>
     </h1>
 
-    <!-- Meta section -->
-    <div class="case-meta">
-      <div class="skills">
+    <div class="case-meta" aria-hidden="false">
+      <div class="skills" aria-label="skills used">
         <span class="chip">UI/UX</span>
         <span class="chip">Figma</span>
-        <span class="chip">High Fidelity</span>
+        <span class="chip">Branding</span>
+        <span class="chip">Interaction</span>
       </div>
-      <div class="info">
+
+      <div class="info" aria-label="project info">
         <span class="chip"><strong>Duration:</strong> 1 Month</span>
         <span class="chip"><strong>Year:</strong> 2024</span>
-        <span class="chip"><strong>Role:</strong> Designer</span>
+        <span class="chip"><strong>Role:</strong> Product + Visual Designer</span>
       </div>
     </div>
 
     <div class="hero-image">
-      <img src="../images/watch-store-2.png" alt="Watch Store Showcase">
+      <img src="../images/watch-store-2.png" alt="Watch Store Showcase — hero mockup" />
+    </div>
+
+    <p class="notes" style="max-width:780px; margin:0 auto;">
+      A minimal, premium e-commerce experience for luxury and smart watch buyers. The focus is clarity, trust signals, and an elegant product presentation that encourages confident purchase decisions.
+    </p>
+  </section>
+
+  <!-- Quick Overview / Goals / KPIs -->
+  <section class="case-grid container" aria-labelledby="overview-title" style="margin-top:3rem;">
+    <div class="card">
+      <h3 id="overview-title">Overview</h3>
+      <p class="notes">Design a trustworthy, minimal storefront that emphasizes product craftsmanship and makes purchasing a luxury watch feel effortless and secure.</p>
+    </div>
+
+    <div class="card">
+      <h3>Primary Goal</h3>
+      <p class="notes">Increase user trust and conversion by simplifying product information and emphasizing craftsmanship, warranty, and transparent pricing.</p>
+    </div>
+
+    <div class="card">
+      <h3>Success Metrics</h3>
+      <div class="kpis" style="margin-top:.5rem;">
+        <div class="kpi"><strong>↑ Conversion</strong><div style="font-size:.95rem;color:var(--subtle);">Target +8%</div></div>
+        <div class="kpi"><strong>↑ Time on product</strong><div style="font-size:.95rem;color:var(--subtle);">Target +20s</div></div>
+        <div class="kpi"><strong>↓ Bounce</strong><div style="font-size:.95rem;color:var(--subtle);">Target -10%</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>My Role</h3>
+      <p class="notes"><strong>End-to-end product & visual design:</strong> research, UX flows, wireframes, high-fidelity UI, and prototype handoff.</p>
     </div>
   </section>
 
-  <!-- Problem / Goal / Solution / Outcome -->
-  <section class="case-grid container">
-    <div class="card"><h3>Problem</h3><p>Cluttered ecommerce stores failed to convey luxury and trust.</p></div>
-    <div class="card"><h3>Goal</h3><p>Deliver a minimal yet engaging storefront for a premium feel.</p></div>
-    <div class="card"><h3>Solution</h3><p>Created a design system with clean typography and luxury visuals.</p></div>
-    <div class="card"><h3>Outcome</h3><p>Boosted engagement with a responsive, elegant design.</p></div>
+  <!-- Research Summary -->
+  <section class="container case-design" aria-labelledby="research-title">
+    <h2 id="research-title" class="section-title">Research & Insights</h2>
+    <p class="notes" style="max-width:800px; margin:0 auto;">
+      To understand why luxury watch sites often feel cluttered and untrustworthy, I analyzed competitor stores and conducted quick moderated interviews with 6 potential buyers.
+      Key findings:
+    </p>
+
+    <div class="image-grid two-col" style="margin-top:1.5rem;">
+      <img src="../images/watch-store-ui-kit.png" alt="Competitor moodboard / UI kit sample" />
+      <div style="padding:1rem;">
+        <ul class="notes" style="margin-top:0.25rem;">
+          <li><strong>Information overload:</strong> product pages show too many competing CTAs and tech specs.</li>
+          <li><strong>Trust is earned by clarity:</strong> users wanted clear warranties, returns, and authenticity badges.</li>
+          <li><strong>Visual hierarchy matters:</strong> large product imagery with restrained UI increases perceived value.</li>
+          <li><strong>Mobile-first browsing:</strong> many users begin on mobile and expect a condensed, clear path to buy.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Persona -->
+  <section class="container" aria-labelledby="persona-title" style="margin-top:3rem;">
+    <h2 id="persona-title" class="section-title">Primary Persona</h2>
+
+    <div class="persona-grid" style="margin-top:1rem;">
+      <div class="persona">
+        <img src="../images/persona-placeholder.jpg" alt="Persona: James — buyer of luxury goods" />
+        <h4>James Carter</h4>
+        <p style="font-weight:600; margin-bottom:.25rem;">Age 38 — Tech Executive</p>
+        <p class="notes">James values quality, provenance, and a seamless purchase process. He shops less frequently but pays premium for trusted craftsmanship. He expects clear product photography, warranty details, and discreet UI that honors the product.</p>
+      </div>
+
+      <div>
+        <h3 style="margin-top:0;">Goals & Needs</h3>
+        <ul class="notes">
+          <li><strong>Goal:</strong> Buy a watch that symbolizes success and reliability.</li>
+          <li><strong>Need:</strong> Clear reassurance of authenticity, warranty and simple returns.</li>
+          <li><strong>Behavior:</strong> Reads product descriptions, compares finishes, and needs quick access to reviews & guarantees.</li>
+        </ul>
+
+        <h3 style="margin-top:1.25rem;">Pain Points</h3>
+        <ul class="notes">
+          <li>Overwhelming product pages with distracting promotions.</li>
+          <li>Unclear warranty and aftercare information.</li>
+          <li>Trust signals buried or unclear (no authenticity badges, unclear seller info).</li>
+        </ul>
+
+        <h3 style="margin-top:1.25rem;">Design Implications</h3>
+        <ul class="notes">
+          <li>Simplify content hierarchy — hero product + one main CTA.</li>
+          <li>Surface trust elements early: badges, warranty, curated customer reviews.</li>
+          <li>Use refined spacing, premium typography, and large product images to communicate value.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- User Journey -->
+  <section class="container" aria-labelledby="journey-title" style="margin-top:3rem;">
+    <h2 id="journey-title" class="section-title">User Journey</h2>
+    <p class="notes" style="max-width:800px;margin:0 auto;">James wants to quickly evaluate product quality and decide with confidence. Below is a condensed journey mapping his experience from discovery to purchase.</p>
+
+    <div class="journey" aria-hidden="false">
+      <div class="journey-step"><strong>Discover</strong><div style="color:var(--subtle);margin-top:.5rem">Social / Search → Landing</div></div>
+      <div class="journey-step"><strong>Evaluate</strong><div style="color:var(--subtle);margin-top:.5rem">Hero image, specs, gallery</div></div>
+      <div class="journey-step"><strong>Trust</strong><div style="color:var(--subtle);margin-top:.5rem">Warranty, reviews, authenticity</div></div>
+      <div class="journey-step"><strong>Decide</strong><div style="color:var(--subtle);margin-top:.5rem">Add to cart → Checkout</div></div>
+    </div>
+  </section>
+
+  <!-- UX Flow -->
+  <section class="container" aria-labelledby="uxflow-title" style="margin-top:3rem;">
+    <h2 id="uxflow-title" class="section-title">UX Flow & Key Screens</h2>
+    <p class="notes" style="max-width:800px;margin:0 auto;">The flow below focuses on a single-task funnel: discovery → product detail → trust proofing → checkout.</p>
+
+    <div class="flow-list" style="margin-top:1rem;">
+      <div class="card">
+        <h4>Home / Landing</h4>
+        <p class="notes">Hero with large product shot, curated collections, clear navigation, minimal copy.</p>
+      </div>
+      <div class="card">
+        <h4>Collection</h4>
+        <p class="notes">Grid with tasteful spacing and card focus on craftsmanship; quick filters (material, price).</p>
+      </div>
+      <div class="card">
+        <h4>Product Detail</h4>
+        <p class="notes">Primary CTA, large imagery, gallery, key specs, warranty & authenticity badges, one action at a time.</p>
+      </div>
+      <div class="card">
+        <h4>Checkout</h4>
+        <p class="notes">Streamlined form, trust microcopy, payment options, and order summary emphasizing return policy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wireframes (Desktop + Mobile) -->
+  <section class="case-wireframes container" aria-labelledby="wireframes-title" style="margin-top:3rem;">
+    <h2 id="wireframes-title" class="section-title">Wireframes — Desktop & Mobile</h2>
+    <p class="notes" style="max-width:800px;margin:0 auto;">Low-fidelity explorations that establish hierarchy and spacing before visual polish.</p>
+
+    <div class="wireframes-grid" style="margin-top:1rem;">
+      <img src="../images/watch-wireframe.png" alt="Desktop wireframe — product page" />
+      <img src="../images/watch-wireframe-mobile.png" alt="Mobile wireframe — product page (placeholder)" />
+      <img src="../images/watch-wireframe-2.png" alt="Desktop wireframe — collection page (placeholder)" />
+      <img src="../images/watch-wireframe-mobile-2.png" alt="Mobile wireframe — collection page (placeholder)" />
+    </div>
+  </section>
+
+  <!-- High-Fidelity UI -->
+  <section class="case-prototype container" aria-labelledby="ui-title" style="margin-top:3rem;">
+    <h2 id="ui-title" class="section-title">High-Fidelity UI</h2>
+    <p class="notes" style="max-width:800px;margin:0 auto;">Final visual system focused on premium typography, restrained color accents, and immersive product imagery.</p>
+
+    <div class="image-grid two-col" style="margin-top:1.5rem;">
+      <img src="../images/watch-store-high-fidelity.png" alt="Desktop high-fidelity prototype" />
+      <img src="../images/watch-store-2.png" alt="Mobile high-fidelity prototype (mockup)" />
+    </div>
+
+    <h3 style="text-align:center; margin-top:2rem;">Design System Highlights</h3>
+    <div style="display:flex; gap:1rem; justify-content:center; margin-top:1rem; flex-wrap:wrap;">
+      <div style="background:var(--card); padding:1rem 1.25rem; border-radius:10px; box-shadow:var(--shadow); text-align:center;">
+        <strong>Typography</strong><div class="notes">Serif/Neutral pairing — large product headlines + refined body copy</div>
+      </div>
+      <div style="background:var(--card); padding:1rem 1.25rem; border-radius:10px; box-shadow:var(--shadow); text-align:center;">
+        <strong>Color</strong><div class="notes">Muted neutrals + single accent gradient to imply premium feel</div>
+      </div>
+      <div style="background:var(--card); padding:1rem 1.25rem; border-radius:10px; box-shadow:var(--shadow); text-align:center;">
+        <strong>Components</strong><div class="notes">Product card, trust badges, adjustable CTA states, and elevated hero containers</div>
+      </div>
+    </div>
   </section>
 
   <!-- UI Kit -->
-  <section class="case-ui container">
-    <h2>UI Kit</h2>
-    <img src="../images/watch-store-ui-kit.png" alt="UI Kit">
+  <section class="case-ui container" aria-labelledby="uikit-title" style="margin-top:3rem;">
+    <h2 id="uikit-title" class="section-title">UI Kit</h2>
+    <p class="notes" style="max-width:800px;margin:0 auto;">Re-usable elements to ensure a consistent, elegant brand experience across the store.</p>
+    <img src="../images/watch-store-ui-kit.png" alt="UI Kit: buttons, colors, typography" style="margin-top:1rem;"/>
   </section>
 
-  <!-- Wireframes -->
-  <section class="case-wireframes container">
-    <h2>Wireframes</h2>
-    <div class="image-grid">
-      <img src="../images/watch-wireframe1.png" alt="Wireframe 1">
-      <img src="../images/watch-wireframe2.png" alt="Wireframe 2">
-    </div>
+  <!-- Accessibility & Performance Notes -->
+  <section class="container" style="margin-top:3rem;">
+    <h2 class="section-title">Accessibility & Performance</h2>
+    <p class="notes" style="max-width:820px;margin:0 auto;">
+      Accessibility and perceived performance are critical for trust. Priorities for implementation:
+    </p>
+
+    <ul class="notes" style="max-width:820px;margin:1rem auto 0;">
+      <li><strong>Images:</strong> Serve optimized images (WebP), descriptive alt text, and progressive loading for fast perceived paint.</li>
+      <li><strong>Contrast & Focus:</strong> Maintain accessible contrast for body text; visible focus states for keyboard navigation.</li>
+      <li><strong>Trust Enhancements:</strong> Use structured data for product schema, clear returns & warranty content, and SSL/third-party authentications.</li>
+    </ul>
   </section>
 
-  <!-- Demo Video -->
-  <section class="case-video container">
-    <h2>Demo Video</h2>
-    <video controls width="100%">
-      <source src="../videos/watch-demo.mp4" type="video/mp4">
-    </video>
+  <!-- Reflection -->
+  <section class="case-reflection container" aria-labelledby="reflection-title" style="margin-top:3rem;">
+    <h2 id="reflection-title" class="section-title">Reflection</h2>
+    <p class="notes" style="max-width:760px;margin:0 auto;">
+      Simplifying the decision process amplified the product’s perceived value. By removing competing CTAs and prioritizing trust signals (authenticity badges, warranty, and curated imagery), users can more easily focus on the craftsmanship — which strengthens confidence and increases conversion intent.
+    </p>
   </section>
 
-  <!-- Banner CTA -->
-  <section class="case-banner">
+  <!-- Final Showcase Banner -->
+  <section class="case-banner" style="margin-top:3rem;">
     <div class="container banner-content">
       <div class="banner-text">
         <h2>Let’s Build Something <span class="highlight-secondary">Beautiful</span></h2>
         <a href="../index.html#contact" class="btn-primary">Contact Me</a>
       </div>
-      <div class="banner-img">
-        <img src="../images/watch-product.jpg" alt="Banner Visual">
+      <div>
+        <img src="../images/watch-store-2.png" alt="Final showcase — watch closeup" />
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>© <span id="year"></span> Tina Asadi. All rights reserved.</p>
+  <footer style="margin-top:2.5rem;">
+    <div class="container" style="padding:2rem 0; text-align:center;">
+      <p>© <span id="year"></span> Tina Asadi. All rights reserved.</p>
+    </div>
   </footer>
 
-  <script src="../script.js"></script>
+  <script>
+    // small script to set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
