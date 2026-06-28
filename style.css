@@ -73,7 +73,12 @@ header {
   background: linear-gradient(135deg, var(--brand), var(--accent));
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 20%, transparent);
 }
-.menu { display: flex; gap: 1rem; align-items: center; }
+.menu { display: flex; gap: 1rem; align-items: center; transition: all 0.3s ease; }
+
+body.dark .menu {
+  background: #1e1e1e;
+  color: white;
+}
 
 /* Header buttons */
 .nav a.btn, 
@@ -403,4 +408,62 @@ footer {
   .projects { grid-template-columns: 1fr; }
   .facts { grid-template-columns: 1fr; }
   .contact-row { grid-template-columns: 1fr; }
+}
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit; 
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    color: inherit;
+  }
+
+  .menu {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+
+    flex-direction: column;
+    gap: 12px;
+
+    width: 220px;
+
+    padding: 16px;
+    border-radius: 14px;
+
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+
+    /* animation system */
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    transition: all 0.25s ease;
+  }
+
+  .menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .menu a,
+  .menu button {
+    padding: 10px;
+    border-radius: 8px;
+  }
 }

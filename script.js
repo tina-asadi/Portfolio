@@ -57,3 +57,17 @@ document.querySelectorAll('#projects .projects-wrapper').forEach(wrapper => {
 document.querySelectorAll('#projects .projects').forEach(row => {
   row.scrollLeft = 0;
 });
+
+const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
+
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+
+  // Optional: close menu when clicking a link
+  document.querySelectorAll(".menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("show");
+    });
+  });
