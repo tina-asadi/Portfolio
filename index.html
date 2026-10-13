@@ -3,329 +3,315 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tina Asadi | Portfolio</title>
+  <title>Tina Asadi | Web Developer &amp; SEO Specialist</title>
+  <meta name="description" content="Tina Asadi is a web developer and SEO specialist in Canada building accessible, responsive, user-friendly websites. See her UI, development and SEO projects.">
+  <link rel="canonical" href="https://tina-asadi.github.io/Portfolio/">
+  <meta name="theme-color" content="#0b0c0f">
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tina Asadi | Web Developer &amp; SEO Specialist">
+  <meta property="og:description" content="Accessible, responsive, search-friendly websites. UI design, front-end development and SEO projects.">
+  <meta property="og:url" content="https://tina-asadi.github.io/Portfolio/">
+  <meta property="og:image" content="https://tina-asadi.github.io/Portfolio/images/tina-photo.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236aa6ff'/%3E%3Cstop offset='1' stop-color='%237cf0bd'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='14' fill='url(%23g)'/%3E%3C/svg%3E">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tina Asadi",
+    "url": "https://tina-asadi.github.io/Portfolio/",
+    "image": "https://tina-asadi.github.io/Portfolio/images/tina-photo.png",
+    "jobTitle": "Web Developer and SEO Specialist",
+    "knowsAbout": ["Web development", "SEO", "UI/UX design", "Accessibility"],
+    "sameAs": ["https://www.linkedin.com/in/tina-asadi-03b472161/", "https://github.com/tina-asadi"]
+  }
+  </script>
+
+  <script>try { if (localStorage.getItem('theme') === 'light') document.documentElement.classList.add('light'); } catch (e) {}</script>
+
   <link rel="stylesheet" href="style.css">
-  <!-- extra CSS only for project scrolling & button overlays (keeps main CSS untouched) -->
-  <link rel="stylesheet" href="projects-extra.css">
-  <link rel="stylesheet" href="hero-lens.css">
-  <link rel="stylesheet" href="projects-v2.css">
   <link rel="stylesheet" href="xray.css">
-  <link rel="stylesheet" href="responsive-fix.css">
 </head>
 <body>
-  <!-- Header -->
+  <a class="skip" href="#main">Skip to content</a>
+
   <header>
-  <div class="container nav">
-    <div class="brand"><span class="dot"></span>Tina Asadi</div>
+    <div class="container nav">
+      <a class="brand" href="./"><span class="dot"></span>Tina Asadi</a>
 
-    <!-- Hamburger button (mobile only) -->
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
-        &#9776;
-      </button>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
 
-        <nav class="menu" id="menu">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#certifications">Certifications</a>
-          <a href="#contact" class="btn">Contact</a>
-          <button id="themeToggle" class="btn" aria-label="Toggle theme">🌓</button>
-        </nav>
-      </div>
-    </header>
-
-  <!-- Hero -->
-  <section class="hero container">
-    <div class="hero-text">
-      <h1>Hi, I’m Tina 👋</h1>
-      <p class="lead">Web Developer & SEO Specialist passionate about building user-friendly websites and optimizing digital experiences.</p>
-      <div class="tags">
-        <span class="tag">Front-End</span>
-        <span class="tag">UI Design</span>
-        <span class="tag">SEO</span>
-      </div>
-      <div class="cta">
-        <a href="#projects" class="btn-primary">View My Work</a>
-        <a href="Tina-Asadi-Resume.pdf" class="btn-ghost">Download Resume</a>
-      </div>
+      <nav class="menu" id="menu" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact" class="btn">Contact</a>
+        <button id="themeToggle" class="btn" type="button" aria-label="Toggle theme">🌓</button>
+      </nav>
     </div>
-    <div class="hero-card">
-      <img src="images/tina-photo.png" alt="Portrait of Tina Asadi">
-    </div>
-  </section>
+  </header>
 
-  <!-- About -->
-  <section id="about" class="container">
-    <h2 class="section-title">About Me</h2>
-    <div class="about">
-      <div class="card">
-        <p>I’m Tina, a Software Engineering graduate studying Web Development and Internet Applications at Algonquin College. I specialize in creating accessible, responsive, and performance-optimized websites with a strong foundation in UI/UX and SEO best practices.</p>
-        <div class="facts">
-          <div class="fact">🌍 Based in Canada</div>
-          <div class="fact">🎓 Dean’s Honour List</div>
-          <div class="fact">🖥 Web Development & SEO Specialist</div>
-          <div class="fact">🚀 Building Accessible & User-Focused Web Experiences</div>
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero-text">
+        <h1>Hi, I’m Tina 👋</h1>
+        <p class="lead">Web Developer &amp; SEO Specialist passionate about building user-friendly websites and optimizing digital experiences.</p>
+        <div class="tags">
+          <span class="tag">Front-End</span>
+          <span class="tag">UI Design</span>
+          <span class="tag">SEO</span>
+        </div>
+        <div class="cta">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="Tina-Asadi-Resume.pdf" class="btn-ghost">Download Resume</a>
         </div>
       </div>
-      <div class="card">
-        <p>I combine design thinking with technical skills to deliver professional web solutions, from low- and high-fidelity prototypes to fully functional bilingual websites. I’m passionate about crafting user-centered digital products that are inclusive and search-friendly.</p>
+      <div class="hero-card">
+        <img src="images/tina-photo.png" alt="Portrait of Tina Asadi" fetchpriority="high" decoding="async">
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills" class="container">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills-grid">
-      <div class="pill">HTML</div>
-      <div class="pill">CSS</div>
-      <div class="pill">JavaScript</div>
-      <div class="pill">UI/UX Design</div>
-      <div class="pill">Responsive Design</div>
-      <div class="pill">SEO</div>
-      <div class="pill">WordPress</div>
-      <div class="pill">Bootstrap</div>
-      <div class="pill">Git/GitHub</div>
-      <div class="pill">Bilingual Sites</div>
-      <div class="pill">Wireframing</div>
-      <div class="pill">Prototyping</div>
-    </div>
-  </section>
+    <!-- About -->
+    <section id="about" class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about">
+        <div class="card">
+          <p>I’m Tina, a Software Engineering graduate studying Web Development and Internet Applications at Algonquin College. I specialize in creating accessible, responsive, and performance-optimized websites with a strong foundation in UI/UX and SEO best practices.</p>
+          <div class="facts">
+            <div class="fact">🌍 Based in Canada</div>
+            <div class="fact">🎓 Dean’s Honour List</div>
+            <div class="fact">🖥 Web Development &amp; SEO Specialist</div>
+            <div class="fact">🚀 Building Accessible &amp; User-Focused Web Experiences</div>
+          </div>
+        </div>
+        <div class="card">
+          <p>I combine design thinking with technical skills to deliver professional web solutions, from low- and high-fidelity prototypes to fully functional bilingual websites. I’m passionate about crafting user-centered digital products that are inclusive and search-friendly.</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Projects -->
-  <section id="projects" class="container">
-    <h2 class="section-title">Projects</h2>
+    <!-- Skills (select one to highlight the projects that use it) -->
+    <section id="skills" class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid" role="group" aria-label="Skills. Select one to highlight related projects.">
+        <button type="button" class="pill">HTML</button>
+        <button type="button" class="pill">CSS</button>
+        <button type="button" class="pill">JavaScript</button>
+        <button type="button" class="pill">UI/UX Design</button>
+        <button type="button" class="pill">Responsive Design</button>
+        <button type="button" class="pill">SEO</button>
+        <button type="button" class="pill">WordPress</button>
+        <button type="button" class="pill">Bootstrap</button>
+        <button type="button" class="pill">Git/GitHub</button>
+        <button type="button" class="pill">Bilingual Sites</button>
+        <button type="button" class="pill">Wireframing</button>
+        <button type="button" class="pill">Prototyping</button>
+      </div>
+    </section>
 
-    <h3>🎨 UI Projects</h3>
-    <div class="projects-wrapper">
-      <div class="projects">
-        <div class="project">
-          <a href="https://dribbble.com/shots/24831899-Minimal-Watch-Store-Website-Design?utm_source=Clipboard_Shot&utm_campaign=tina-asadi&utm_content=Minimal%20Watch%20Store%20Website%20Design&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=tina-asadi&utm_content=Minimal%20Watch%20Store%20Website%20Design&utm_medium=Social_Share">
-            <img src="images/watch-store-2.png" alt="Minimal Watch Store Design">
-            <div class="project-body">
-              <h3>Minimal Watch Store</h3>
-              <p>Website design crafted for both desktop and mobile, with a focus on luxury branding.</p>
-              <div class="stack">
-                <span class="chip">UI/UX</span>
-                <span class="chip">Figma</span>
-                <span class="chip">High Fidelity</span>
+    <!-- Projects -->
+    <section id="projects" class="container">
+      <h2 class="section-title">Projects</h2>
+
+      <h3>🎨 UI Projects</h3>
+      <div class="projects-wrapper">
+        <div class="projects">
+          <article class="project">
+            <a href="https://dribbble.com/shots/24831899-Minimal-Watch-Store-Website-Design">
+              <img src="images/watch-store-2.png" alt="Minimal watch store website design" loading="lazy" decoding="async">
+              <div class="project-body">
+                <h4>Minimal Watch Store</h4>
+                <p>Website design crafted for both desktop and mobile, with a focus on luxury branding.</p>
+                <div class="stack"><span class="chip">UI/UX</span><span class="chip">Figma</span><span class="chip">High Fidelity</span></div>
               </div>
-            </div>
-          </a>
-        </div>
-        <div class="project">
-          <a href="#">
-            <img src="images/travel-agency-2.png" alt="Travel Agency Georgia">
-            <div class="project-body">
-              <h3>Travel Agency Website</h3>
-              <p>UI design for a Georgia-based travel agency, responsive for desktop and mobile.</p>
-              <div class="stack">
-                <span class="chip">UI/UX</span>
-                <span class="chip">Responsive</span>
+            </a>
+          </article>
+
+          <article class="project">
+            <a href="#">
+              <img src="images/travel-agency-2.png" alt="Travel agency website design for Georgia" loading="lazy" decoding="async">
+              <div class="project-body">
+                <h4>Travel Agency Website</h4>
+                <p>UI design for a Georgia-based travel agency, responsive for desktop and mobile.</p>
+                <div class="stack"><span class="chip">UI/UX</span><span class="chip">Responsive</span></div>
               </div>
-            </div>
-          </a>
-        </div>
-        <div class="project">
-          <a href="#">
-            <img src="images/grocery-app-3.png" alt="Grocery App Design">
-            <div class="project-body">
-              <h3>Grocery App</h3>
-              <p>Mobile-first grocery app design with intuitive navigation and cart flow.</p>
-              <div class="stack">
-                <span class="chip">UI</span>
-                <span class="chip">Mobile</span>
+            </a>
+          </article>
+
+          <article class="project">
+            <a href="#">
+              <img src="images/grocery-app-3.png" alt="Grocery app design" loading="lazy" decoding="async">
+              <div class="project-body">
+                <h4>Grocery App</h4>
+                <p>Mobile-first grocery app design with intuitive navigation and cart flow.</p>
+                <div class="stack"><span class="chip">UI</span><span class="chip">Mobile</span></div>
               </div>
-            </div>
-          </a>
-        </div>
-        <div class="project">
-          <a href="https://dribbble.com/shots/24857889-Fresh-Juice-Website-Design">
-            <img src="images/landing.png" alt="Juice Landing Page">
-            <div class="project-body">
-              <h3>Juice Landing Page</h3>
-              <p>Interactive landing page designed for a juice brand, optimized for engagement.</p>
-              <div class="stack">
-                <span class="chip">UI/UX</span>
-                <span class="chip">Responsive</span>
+            </a>
+          </article>
+
+          <article class="project">
+            <a href="https://dribbble.com/shots/24857889-Fresh-Juice-Website-Design">
+              <img src="images/landing.png" alt="Fresh juice landing page design" loading="lazy" decoding="async">
+              <div class="project-body">
+                <h4>Juice Landing Page</h4>
+                <p>Interactive landing page designed for a juice brand, optimized for engagement.</p>
+                <div class="stack"><span class="chip">UI/UX</span><span class="chip">Responsive</span></div>
               </div>
-            </div>
-          </a>
+            </a>
+          </article>
         </div>
       </div>
-    </div>
 
-    <h3>💻 Development Projects</h3>
-    <div class="projects-wrapper">
-      <div class="projects">
-        <div class="project">
-          <a href="https://tina-asadi.github.io/Portfolio/">
-            <img src="images/portfolio.png" alt="Portfolio Website">
-            <div class="project-body">
-              <h3>Portfolio Website</h3>
-              <p>Responsive personal portfolio showcasing my skills, projects, and certifications.</p>
-              <div class="stack">
-                <span class="chip">HTML</span>
-                <span class="chip">CSS</span>
-                <span class="chip">JavaScript</span>
+      <h3>💻 Development Projects</h3>
+      <div class="projects-wrapper">
+        <div class="projects">
+          <article class="project">
+            <a href="https://tina-asadi.github.io/Portfolio/">
+              <img src="images/portfolio.png" alt="Portfolio website homepage" loading="lazy" decoding="async">
+              <div class="project-body">
+                <h4>Portfolio Website</h4>
+                <p>Responsive personal portfolio showcasing my skills, projects, and certifications.</p>
+                <div class="stack"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
               </div>
-            </div>
-          </a>
-        </div>
-        <div class="project">
-          <a href="https://tina-asadi.github.io">
-            <img src="images/bilingual-website-2.png" alt="Bilingual Website">
-            <div class="project-body">
-              <h3>Bilingual Website</h3>
-              <p>Fully responsive bilingual website built using Bootstrap.</p>
-              <div class="stack">
-                <span class="chip">Bootstrap</span>
-                <span class="chip">Bilingual</span>
+            </a>
+          </article>
+
+          <article class="project">
+            <a href="https://tina-asadi.github.io">
+              <img src="images/bilingual-website-2.png" alt="Bilingual website homepage" loading="lazy" decoding="async">
+              <div class="project-body">
+                <h4>Bilingual Website</h4>
+                <p>Fully responsive bilingual website built using Bootstrap.</p>
+                <div class="stack"><span class="chip">Bootstrap</span><span class="chip">Bilingual</span></div>
               </div>
-            </div>
-          </a>
-        </div>
-        <div class="project">
-          <a href="projects/travel-plan.html">
-            <img src="images/travel-plan.png" alt="Travel Plan Razor Project">
-            <div class="project-body">
-              <h3>Travel Plan (Razor)</h3>
-              <p>Travel planning app prototype developed using Razor Pages.</p>
-              <div class="stack">
-                <span class="chip">ASP.NET Razor</span>
-                <span class="chip">Web Dev</span>
+            </a>
+          </article>
+
+          <article class="project">
+            <a href="projects/travel-plan.html">
+              <img src="images/travel-plan.png" alt="Travel Plan app built with Razor Pages" loading="lazy" decoding="async">
+              <div class="project-body">
+                <h4>Travel Plan (Razor)</h4>
+                <p>Travel planning app prototype developed using Razor Pages.</p>
+                <div class="stack"><span class="chip">ASP.NET Razor</span><span class="chip">Web Dev</span></div>
               </div>
-            </div>
-          </a>
+            </a>
+          </article>
         </div>
       </div>
-    </div>
 
-    <h3>🔍 UX & SEO Projects</h3>
-    <div class="projects-wrapper">
-      <div class="projects">
-        <div class="project">
-          <a href="#">
-            <img src="images/userflow.png" alt="Another User Flow">
-            <div class="project-body">
-              <h3>User Flow Design</h3>
-              <p>Redesigned navigation and checkout process to reduce user friction.</p>
-              <div class="stack">
-                <span class="chip">UX</span>
-                <span class="chip">Wireframes</span>
+      <h3>🔍 UX &amp; SEO Projects</h3>
+      <div class="projects-wrapper">
+        <div class="projects">
+          <article class="project">
+            <a href="#">
+              <img src="images/userflow.png" alt="User flow diagram for a redesigned navigation and checkout" loading="lazy" decoding="async">
+              <div class="project-body">
+                <h4>User Flow Design</h4>
+                <p>Redesigned navigation and checkout process to reduce user friction.</p>
+                <div class="stack"><span class="chip">UX</span><span class="chip">Wireframes</span></div>
               </div>
-            </div>
-          </a>
-        </div>
-        <div class="project">
-          <a href="#">
-            <img src="images/seo-report.png" alt="SEO Report">
-            <div class="project-body">
-              <h3>SEO Report</h3>
-              <p>Detailed SEO audit with actionable recommendations for ranking improvements.</p>
-              <div class="stack">
-                <span class="chip">SEO</span>
-                <span class="chip">Analytics</span>
+            </a>
+          </article>
+
+          <article class="project">
+            <a href="#">
+              <img src="images/seo-report.png" alt="SEO audit report" loading="lazy" decoding="async">
+              <div class="project-body">
+                <h4>SEO Report</h4>
+                <p>Detailed SEO audit with actionable recommendations for ranking improvements.</p>
+                <div class="stack"><span class="chip">SEO</span><span class="chip">Analytics</span></div>
               </div>
-            </div>
-          </a>
-        </div>
-        <div class="project">
-          <a href="#">
-            <img src="images/pillar-cluster.png" alt="Pillar Cluster Strategy">
-            <div class="project-body">
-              <h3>Pillar Cluster SEO</h3>
-              <p>Developed a pillar-cluster content strategy to boost site authority and internal linking.</p>
-              <div class="stack">
-                <span class="chip">SEO</span>
-                <span class="chip">Content Strategy</span>
+            </a>
+          </article>
+
+          <article class="project">
+            <a href="#">
+              <img src="images/pillar-cluster.png" alt="Pillar-cluster content strategy diagram" loading="lazy" decoding="async">
+              <div class="project-body">
+                <h4>Pillar Cluster SEO</h4>
+                <p>Developed a pillar-cluster content strategy to boost site authority and internal linking.</p>
+                <div class="stack"><span class="chip">SEO</span><span class="chip">Content Strategy</span></div>
               </div>
-            </div>
-          </a>
+            </a>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Experience -->
-  <section id="experience" class="container">
-    <h2 class="section-title">Experience</h2>
-    <div class="timeline">
-      <div class="role">
-        <h4>Media and Public Affairs Co-op Student · Hydro Ottawa</h4>
-        <p class="meta">2025 · Ottawa, Canada</p>
-        <ul>
-          <li>Designed subpages in Adobe XD using agency-provided design elements and templates.</li>
-          <li>Built and updated web pages within Drupal CMS, ensuring consistent layouts and structure across the website.</li>
-          <li>Created French-language versions of web pages using existing translated content.</li>
-          <li>Assisted with content updates, publishing, and ongoing website maintenance.</li>
-          <li>Performed quality assurance checks for layout accuracy, responsiveness, and functionality across pages.</li>
-          <li>Applied basic custom code where needed (e.g., glossary page templates and structural enhancements).</li>
-          <li>Supported copy editing by reviewing and refining website content for clarity, consistency, and communication standards.</li>
-          <li>Participated in team meetings and contributed to discussions on content and website improvements.</li>
-        </ul>
+    <!-- Experience -->
+    <section id="experience" class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <div class="role">
+          <h3>Media and Public Affairs Co-op Student · Hydro Ottawa</h3>
+          <p class="meta">2025 · Ottawa, Canada</p>
+          <ul>
+            <li>Designed subpages in Adobe XD using agency-provided design elements and templates.</li>
+            <li>Built and updated web pages within Drupal CMS, ensuring consistent layouts and structure across the website.</li>
+            <li>Created French-language versions of web pages using existing translated content.</li>
+            <li>Assisted with content updates, publishing, and ongoing website maintenance.</li>
+            <li>Performed quality assurance checks for layout accuracy, responsiveness, and functionality across pages.</li>
+            <li>Applied basic custom code where needed (e.g., glossary page templates and structural enhancements).</li>
+            <li>Supported copy editing by reviewing and refining website content for clarity, consistency, and communication standards.</li>
+            <li>Participated in team meetings and contributed to discussions on content and website improvements.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <h3>SEO Specialist · PergasTeb</h3>
+          <p class="meta">Sep 2024 – Dec 2024 · Tehran, Iran</p>
+          <ul>
+            <li>Improved website visibility through keyword optimization and on-page SEO.</li>
+            <li>Collaborated with UI/UX teams to enhance site performance and accessibility.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <h3>Web Support and SEO Specialist · Damavand Polymer</h3>
+          <p class="meta">October 2022 – March 2023 · Tehran, Iran</p>
+          <ul>
+            <li>Managed and executed comprehensive on-page SEO strategies to improve site visibility and search engine rankings</li>
+            <li>Optimized product pages by enhancing meta tags, headings, image alt text, and internal linking for improved SEO performance</li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <br>
-
-    <div class="timeline">
-      <div class="role">
-        <h4>SEO Specialist · PergasTeb</h4>
-        <p class="meta">Sep 2024 – Dec 2024 · Tehran, Iran</p>
-        <ul>
-          <li>Improved website visibility through keyword optimization and on-page SEO.</li>
-          <li>Collaborated with UI/UX teams to enhance site performance and accessibility.</li>
-        </ul>
+    <!-- Certifications -->
+    <section id="certifications" class="container">
+      <h2 class="section-title">Certifications</h2>
+      <div class="certs">
+        <div class="cert">Foundations of UX Design · Google</div>
+        <div class="cert">Python Master Class</div>
+        <div class="cert">Search Engine Optimization (SEO)</div>
       </div>
-    </div>
+    </section>
 
-    <br>
-    
-    <div class="timeline">
-      <div class="role">
-        <h4>Web Support and SEO Specialist · Damavand Polymer</h4>
-        <p class="meta">October 2022 – March 2023 · Tehran, Iran</p>
-        <ul>
-          <li>Managed and executed comprehensive on-page SEO strategies to improve site visibility and search engine rankings</li>
-          <li>Optimized product pages by enhancing meta tags, headings, image alt text, and internal linking for improved SEO performance</li>
-        </ul>
+    <!-- Contact -->
+    <section id="contact" class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-card">
+        <p>I enjoy building accessible, user-focused digital experiences and collaborating on impactful web projects.</p>
+        <div class="contact-row">
+          <a href="mailto:asad0019@algonquinlive.com" class="btn">Email Me</a>
+          <a href="https://www.linkedin.com/in/tina-asadi-03b472161/" class="btn" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Certifications -->
-  <section id="certifications" class="container">
-    <h2 class="section-title">Certifications</h2>
-    <div class="certs">
-      <div class="cert">Foundations of UX Design · Google</div>
-      <div class="cert">Python Master Class</div>
-      <div class="cert">Search Engine Optimization (SEO)</div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="container">
-    <h2 class="section-title">Contact</h2>
-    <div class="contact-card">
-      <p>I enjoy building accessible, user-focused digital experiences and collaborating on impactful web projects.</p>
-      <div class="contact-row">
-        <a href="mailto:asad0019@algonquinlive.com" class="btn">Email Me</a>
-        <a href="https://www.linkedin.com/in/tina-asadi-03b472161/" class="btn">LinkedIn</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer>
     <p>© <span id="year"></span> Tina Asadi. All rights reserved.</p>
   </footer>
-
-  <script src="script.js"></script>
-  <script src="hero-lens.js" defer></script>
-  <script src="projects-v2.js" defer></script>
+  <script src="script.js" defer></script>
   <script src="xray.js" defer></script>
-  <script src="menu-fix.js" defer></script>
 </body>
 </html>
