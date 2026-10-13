@@ -1,0 +1,118 @@
+/* Hero "blueprint lens": a cursor-following circle reveals the hero's wireframe layer. */
+.has-lens { position: relative; }
+
+.hero-wire {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+  clip-path: circle(var(--r, 0px) at var(--x, 50%) var(--y, 50%));
+  background-color: #0b1f4b;
+  background-image:
+    linear-gradient(rgba(147, 197, 253, .14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(147, 197, 253, .14) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: #bfdbfe;
+}
+
+/* Strip the finished look from the cloned layer */
+.hero-wire * {
+  background: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  animation: none !important;
+  transition: none !important;
+  color: #bfdbfe !important;
+  border-color: #93c5fd !important;
+  outline: 1px dashed rgba(147, 197, 253, .6);
+  outline-offset: 3px;
+}
+.hero-wire h1 {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: .7px #bfdbfe;
+}
+.hero-wire img { opacity: 0; }
+
+/* Image placeholder: a box with a cross, like a wireframe */
+.hero-wire .hero-card {
+  background:
+    linear-gradient(to top right, transparent calc(50% - .5px), rgba(147, 197, 253, .7) 50%, transparent calc(50% + .5px)),
+    linear-gradient(to top left, transparent calc(50% - .5px), rgba(147, 197, 253, .7) 50%, transparent calc(50% + .5px)) !important;
+}
+
+/* Dimension tags, like a design inspector */
+.hero-wire [data-label] { position: relative; }
+.hero-wire [data-label]::after {
+  content: attr(data-label);
+  position: absolute;
+  left: 0;
+  top: -1.5em;
+  padding: 2px 5px;
+  font: 500 10px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  white-space: nowrap;
+  background: #7cf0bd;
+  -webkit-text-fill-color: #0b1f4b;
+  -webkit-text-stroke: 0;
+  color: #0b1f4b !important;
+}
+
+/* Lens edge (clipped to the hero box so it never spills onto the header or next section) */
+.lens-clip {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  overflow: hidden;
+  pointer-events: none;
+}
+.lens-ring {
+  position: absolute;
+  left: var(--x, 50%);
+  top: var(--y, 50%);
+  width: calc(var(--r, 0px) * 2);
+  height: calc(var(--r, 0px) * 2);
+  transform: translate(-50%, -50%);
+  border: 1.5px solid rgba(147, 197, 253, .9);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: var(--ring, 0);
+}
+
+/* Keyboard- and touch-friendly control */
+.lens-ui {
+  position: absolute;
+  z-index: 4;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lens-hint {
+  font-size: .85rem;
+  opacity: .7;
+  transition: opacity .3s;
+}
+.lens-ui.is-used .lens-hint { opacity: 0; }
+.lens-toggle {
+  font: inherit;
+  font-size: .9rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid #93c5fd;
+  background: #0b1f4b;
+  color: #dbeafe;
+  cursor: pointer;
+}
+.lens-toggle[aria-pressed="true"] { background: #dbeafe; color: #0b1f4b; }
+.lens-toggle:focus-visible { outline: 3px solid #60a5fa; outline-offset: 2px; }
+
+@media (hover: none) {
+  .lens-hint { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-wire, .lens-ring { transition: none; }
+}
