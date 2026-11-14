@@ -176,3 +176,23 @@
 
 /* Small heading between blocks inside a chapter */
 .ch h3.sub { margin: 2.2rem 0 .8rem; font-size: 1.15rem; }
+
+/* ---------- Theme-aware screenshots: a light and a dark file per image ---------- */
+.img-dark { display: none; }
+:root:not(.light) .img-light { display: none; }
+:root:not(.light) .img-dark { display: block; }
+
+/* Galleries show every image in full (no inner scrolling or cropping) */
+.gallery-item { max-height: none; overflow: visible; }
+.gallery-item img { height: auto; vertical-align: bottom; border-radius: inherit; }
+.gallery.phones { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+.gallery-item.phone { flex: 0 1 320px; }
+
+/* Compare slider keeps each image's own proportions, so nothing is cropped */
+.compare--16x10 { aspect-ratio: 16 / 10; }
+.cs-cover--16x10 { aspect-ratio: 16 / 10; }
+.cs-cover--16x9 { aspect-ratio: 16 / 9; }
+.cs-cover--seo { aspect-ratio: 1280 / 597; }
+.compare--4x3 { aspect-ratio: 4 / 3; }
+.compare--portrait { aspect-ratio: 17 / 20; }
+.compare img { object-fit: fill; }
