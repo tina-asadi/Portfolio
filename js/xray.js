@@ -1,7 +1,7 @@
 /* SEO X-ray
    A toggle that audits the live page: search preview, SEO/accessibility checks,
    heading outline and real speed metrics measured in the visitor's browser.
-   Everything is read from the DOM, so it stays accurate. */
+   Everything is read from the DOM, so it stays accurate as you edit the site. */
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 

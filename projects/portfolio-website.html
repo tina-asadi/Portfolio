@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website | Case study | Tina Asadi</title>
+  <meta name="description" content="Case study: how I audited, designed and rebuilt my portfolio with wireframes, high-fidelity screens and plain HTML, CSS and JavaScript.">
+  <link rel="canonical" href="https://tina-asadi.github.io/Portfolio/projects/portfolio-website.html">
+  <meta name="theme-color" content="#0b0c0f">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Portfolio Website | Case study | Tina Asadi">
+  <meta property="og:description" content="Case study: how I audited, designed and rebuilt my portfolio with wireframes, high-fidelity screens and plain HTML, CSS and JavaScript.">
+  <meta property="og:url" content="https://tina-asadi.github.io/Portfolio/projects/portfolio-website.html">
+  <meta property="og:image" content="https://tina-asadi.github.io/Portfolio/images/portfolio-desktop-hifi.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Portfolio Website",
+      "description": "Case study: how I audited, designed and rebuilt my portfolio with wireframes, high-fidelity screens and plain HTML, CSS and JavaScript.",
+      "image": "https://tina-asadi.github.io/Portfolio/images/portfolio-desktop-hifi.png",
+      "url": "https://tina-asadi.github.io/Portfolio/projects/portfolio-website.html",
+      "author": {
+          "@type": "Person",
+          "name": "Tina Asadi",
+          "url": "https://tina-asadi.github.io/Portfolio/"
+      }
+  }
+  </script>
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <script src="../js/theme-init.js"></script>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/case-study.css">
+  <link rel="stylesheet" href="../css/xray.css">
+  <script src="../js/site.js" defer></script>
+  <script src="../js/case-study.js" defer></script>
+  <script src="../js/xray.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" id="progress"></div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="../index.html"><span class="dot"></span>Tina Asadi</a>
+
+      <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+
+      <nav class="menu" id="menu" aria-label="Main">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#certifications">Certifications</a>
+        <a href="../index.html#contact" class="btn">Contact</a>
+        <button id="themeToggle" class="btn" type="button" aria-label="Toggle theme">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- Intro -->
+    <div class="cs-intro">
+      <span class="tag">Case study</span>
+      <h1>Portfolio Website</h1>
+      <p class="lead">My personal portfolio, rebuilt around one idea: show the process, not just the result. Designed as wireframes and high-fidelity screens, then built with plain HTML, CSS and JavaScript.</p>
+      <dl class="cs-facts">
+        <div><dt>Role</dt><dd>Designer and developer (solo)</dd></div>
+        <div><dt>Type</dt><dd>Personal project</dd></div>
+        <div><dt>Tools</dt><dd>HTML, CSS, JavaScript, GitHub Pages</dd></div>
+        <div><dt>Focus</dt><dd>UX, accessibility, SEO</dd></div>
+      </dl>
+      <div class="cs-cover"><img src="../images/portfolio-desktop-hifi.png" alt="High fidelity desktop design of the portfolio homepage, with the blueprint lens over the hero" fetchpriority="high" decoding="async"></div>
+    </div>
+
+    <div class="cs-layout">
+      <nav class="rail" aria-label="Chapters">
+        <a href="#plan">The plan</a>
+        <a href="#idea">The idea</a>
+        <a href="#low-fidelity">Low fidelity</a>
+        <a href="#high-fidelity">Low to high fidelity</a>
+        <a href="#build">Building it</a>
+        <a href="#prototype">The prototype</a>
+        <a href="#result">The result</a>
+      </nav>
+
+      <div>
+    <article class="ch reveal" id="plan">
+      <p class="ch-num" aria-hidden="true">01</p>
+      <h2>The plan</h2>
+      <p>My portfolio is the first project anyone sees, so it has to prove what I claim: that I can design, build and optimize a website. Version 1 worked, but it felt like a template, and when I audited it I found real problems.</p>
+      <p>I set three goals for version 2: make it genuinely usable on every screen size, make it search- and accessibility-friendly, and give every project room to tell its story. Here is what the audit found:</p>
+      <ul class="bullets">
+        <li>Several project cards linked to "#", so they went nowhere, and clicking them caused a JavaScript error.</li>
+        <li>The mobile menu was hard-coded white, so it stayed light even in dark mode.</li>
+        <li>Each project category was its own horizontal scroller, so on a phone visitors met three carousels before seeing any project.</li>
+        <li>The page had no meta description, social preview or structured data, and a stylesheet link pointed to a file that did not exist.</li>
+        <li>Card hover effects were clipped inside the scrolling rows, and the layout had no clear tablet breakpoint.</li>
+      </ul>
+      <ol class="steps">
+        <li class="step"><b>1. Audit</b><span>List what is broken or weak in version 1</span></li>
+        <li class="step"><b>2. Define</b><span>Set goals and decide what the site must prove</span></li>
+        <li class="step"><b>3. Wireframe</b><span>Sketch the structure for desktop and mobile</span></li>
+        <li class="step"><b>4. Design</b><span>High-fidelity screens in dark and light themes</span></li>
+        <li class="step"><b>5. Build</b><span>Plain HTML, CSS and JavaScript</span></li>
+        <li class="step"><b>6. Test</b><span>Real devices, keyboard only, accessibility and SEO checks</span></li>
+      </ol>
+    </article>
+
+    <article class="ch reveal" id="idea">
+      <p class="ch-num" aria-hidden="true">02</p>
+      <h2>The idea</h2>
+      <p>My skills sit between design and code, so I wanted visitors to feel that handoff instead of reading about it. Every idea below came from that one question: how can the site itself be evidence?</p>
+      <div class="cards">
+        <div class="cs-card"><h3>Show the process</h3><p>A "blueprint lens" follows the cursor over the hero and reveals the wireframe underneath. On touch screens a button does the same.</p></div>
+        <div class="cs-card"><h3>Let skills prove themselves</h3><p>Tapping a skill highlights the projects that used it, so claims are linked to work.</p></div>
+        <div class="cs-card"><h3>Tell the story</h3><p>Each project opens a case study that walks from plan to result, like this page.</p></div>
+        <div class="cs-card"><h3>One idea per screen on phones</h3><p>Category chips choose a single carousel, with a counter and dots so people always know where they are.</p></div>
+        <div class="cs-card"><h3>Accessible by default</h3><p>Real buttons, visible focus, large tap targets, reduced-motion support and a menu that follows the theme.</p></div>
+        <div class="cs-card"><h3>Search-friendly foundations</h3><p>Semantic structure, a clean heading order, meta tags and structured data from the start.</p></div>
+      </div>
+    </article>
+
+    <article class="ch reveal" id="low-fidelity">
+      <p class="ch-num" aria-hidden="true">03</p>
+      <h2>Low fidelity</h2>
+      <p>I started in grayscale on purpose. With no color, type or imagery to hide behind, I could only judge structure: what comes first, how much each section needs, and where the eye goes.</p>
+      <p>On desktop I kept one clear grid: a sticky header, a hero with the message on the left and a portrait on the right, then sections of cards. On mobile everything collapses to a single column, the menu moves behind a hamburger, and projects become one swipeable carousel. The numbered notes mark the decisions I wanted to defend.</p>
+      <div class="gallery">
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Full-page low fidelity wireframe of the desktop homepage"><img src="../images/portfolio-desktop-lowfi-full.png" alt="Full-page low fidelity wireframe of the desktop homepage" loading="lazy" decoding="async"></figure>
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Low fidelity wireframes of the mobile home screen, open menu and projects carousel"><img src="../images/portfolio-mobile-lowfi.png" alt="Low fidelity wireframes of the mobile home screen, open menu and projects carousel" loading="lazy" decoding="async"></figure>
+      </div>
+    </article>
+
+    <article class="ch reveal" id="high-fidelity">
+      <p class="ch-num" aria-hidden="true">04</p>
+      <h2>Low to high fidelity</h2>
+      <p>Moving to high fidelity meant turning structure into feeling. I defined color tokens first (a dark and a light theme from the same variables), then type hierarchy, spacing and depth. A single mint accent marks anything interactive or active, so the page stays calm and the important things stand out.</p>
+      <p>Drag the slider to compare the wireframe with the finished design. The layout barely moved, which was the point: the wireframe made the structural decisions, and fidelity only added polish. The mobile screens below show the same idea on a phone.</p>
+      <div class="gallery">
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="High fidelity mobile screens: home, open menu and projects carousel"><img src="../images/portfolio-mobile-hifi.png" alt="High fidelity mobile screens: home, open menu and projects carousel" loading="lazy" decoding="async"></figure>
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Full-page high fidelity design of the desktop homepage"><img src="../images/portfolio-desktop-hifi-full.png" alt="Full-page high fidelity design of the desktop homepage" loading="lazy" decoding="async"></figure>
+      </div>
+      <div class="compare">
+        <img src="../images/portfolio-desktop-lowfi.png" alt="Wireframe design" loading="lazy" decoding="async">
+        <div class="compare-top"><img src="../images/portfolio-desktop-hifi.png" alt="Final design design" loading="lazy" decoding="async"></div>
+        <span class="compare-label is-left">Wireframe</span>
+        <span class="compare-label is-right">Final design</span>
+        <div class="compare-line"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Reveal final design over wireframe">
+      </div>
+      <p class="hint">Drag the handle, or use the arrow keys.</p>
+    </article>
+
+    <article class="ch reveal" id="build">
+      <p class="ch-num" aria-hidden="true">05</p>
+      <h2>Building it</h2>
+      <p>I built the site with plain HTML, CSS and JavaScript and no frameworks, so it stays fast and easy to maintain. These are the parts I am proudest of, and the bugs I found along the way.</p>
+      <div class="cards">
+        <div class="cs-card"><h3>Design tokens</h3><p>Every color and shadow is a CSS variable. The dark and light themes just swap them, and the saved theme is applied before the first paint so the page never flashes.</p></div>
+        <div class="cs-card"><h3>Blueprint lens</h3><p>At runtime the hero is cloned into a wireframe layer and revealed through a circle. The cursor only drives it with a mouse, and respects reduced motion.</p></div>
+        <div class="cs-card"><h3>Skill filter</h3><p>Skills map to the tags on each project. On desktop non-matching cards dim; on phones they leave the carousel.</p></div>
+        <div class="cs-card"><h3>Mobile carousel</h3><p>CSS scroll snapping gives one card per swipe, with the neighbors peeking in, a live counter and tappable dots.</p></div>
+        <div class="cs-card"><h3>Case viewer</h3><p>A project image morphs into the case study using the View Transitions API, with a plain fallback in other browsers.</p></div>
+        <div class="cs-card"><h3>Bugs found and fixed</h3><p>The "#" links error, the always-white mobile menu, clipped hover effects and the missing stylesheet are all fixed in version 2.</p></div>
+      </div>
+    </article>
+
+    <article class="ch reveal" id="prototype">
+      <p class="ch-num" aria-hidden="true">06</p>
+      <h2>The prototype</h2>
+      <p>I did not build a separate clickable mockup. Because the site is plain HTML, the working site is the prototype. Launch it below, then resize the window or open it on your phone to see the layout adapt.</p>
+      <div class="prototype" data-embed="https://tina-asadi.github.io/Portfolio/" data-title="Live portfolio website">
+        <div class="prototype-intro">
+          <p>This is the real, working site.</p>
+          <div class="cta"><button type="button" class="btn-primary" data-launch>Launch the live site</button><a class="btn-ghost" href="https://tina-asadi.github.io/Portfolio/" target="_blank" rel="noopener">Open in a new tab</a></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="ch reveal" id="result">
+      <p class="ch-num" aria-hidden="true">07</p>
+      <h2>The result</h2>
+      <p>Version 2 is live. It keeps all of my content, but it is easier to move around, works on every screen size, and gives each project a place to tell its story.</p>
+      <div class="metrics">
+        <div class="metric" data-value="10" data-suffix=""><strong>10</strong><span>Projects presented</span></div>
+        <div class="metric" data-value="12" data-suffix=""><strong>12</strong><span>Skills you can tap to filter</span></div>
+        <div class="metric" data-value="2" data-suffix=""><strong>2</strong><span>Themes from one set of tokens</span></div>
+        <div class="metric" data-value="0" data-suffix=""><strong>0</strong><span>Frameworks or libraries</span></div>
+      </div>
+      <ul class="bullets">
+        <li>Wireframing first would have caught the three-carousel problem and the menu problem before any code existed. Next time the design comes before the build.</li>
+        <li>Small details carry the experience: tap-target size, focus rings, and a menu that respects the theme.</li>
+        <li>Progressive enhancement keeps fancy features from becoming failure points. The lens, the viewer and the filter are extras, and the site works without them.</li>
+        <li>Next: give every project its own case study, measure speed, accessibility and SEO with Lighthouse, and generate one static page per case study so search engines can read each one.</li>
+      </ul>
+      <div class="cta">
+        <a class="btn-primary" href="https://tina-asadi.github.io/Portfolio/" target="_blank" rel="noopener">View the live site</a>
+        <a class="btn-ghost" href="https://github.com/tina-asadi/Portfolio" target="_blank" rel="noopener">View the code</a>
+      </div>
+    </article>
+      </div>
+    </div>
+
+    <nav class="pager" aria-label="More projects">
+      <span></span>
+      <a class="next" href="seo-report.html"><small>Next →</small>SEO Report</a>
+    </nav>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Tina Asadi. All rights reserved.</p>
+  </footer>
+</body>
+</html>

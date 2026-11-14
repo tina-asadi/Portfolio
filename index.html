@@ -16,7 +16,7 @@
   <meta property="og:image" content="https://tina-asadi.github.io/Portfolio/images/tina-photo.png">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236aa6ff'/%3E%3Cstop offset='1' stop-color='%237cf0bd'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='14' fill='url(%23g)'/%3E%3C/svg%3E">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
   <script type="application/ld+json">
   {
@@ -31,10 +31,15 @@
   }
   </script>
 
-  <script>try { if (localStorage.getItem('theme') === 'light') document.documentElement.classList.add('light'); } catch (e) {}</script>
+  <!-- Applies the saved theme before first paint (no flash) -->
+  <script src="js/theme-init.js"></script>
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="xray.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/xray.css">
+  <script src="js/site.js" defer></script>
+  <script src="js/home.js" defer></script>
+  <script src="js/xray.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -120,128 +125,134 @@
     <section id="projects" class="container">
       <h2 class="section-title">Projects</h2>
 
-      <h3>🎨 UI Projects</h3>
-      <div class="projects-wrapper">
-        <div class="projects">
-          <article class="project">
-            <a href="https://dribbble.com/shots/24831899-Minimal-Watch-Store-Website-Design">
-              <img src="images/watch-store-2.png" alt="Minimal watch store website design" loading="lazy" decoding="async">
-              <div class="project-body">
-                <h4>Minimal Watch Store</h4>
-                <p>Website design crafted for both desktop and mobile, with a focus on luxury branding.</p>
-                <div class="stack"><span class="chip">UI/UX</span><span class="chip">Figma</span><span class="chip">High Fidelity</span></div>
-              </div>
-            </a>
-          </article>
+      <div class="project-group" data-cat="ui" data-label="UI">
+        <h3>🎨 UI Projects</h3>
+        <div class="projects-wrapper">
+          <div class="projects">
+            <article class="project">
+              <a href="https://dribbble.com/shots/24831899-Minimal-Watch-Store-Website-Design">
+                <img src="images/watch-store-2.png" alt="Minimal watch store website design" loading="lazy" decoding="async">
+                <div class="project-body">
+                  <h4>Minimal Watch Store</h4>
+                  <p>Website design crafted for both desktop and mobile, with a focus on luxury branding.</p>
+                  <div class="stack"><span class="chip">UI/UX</span><span class="chip">Figma</span><span class="chip">High Fidelity</span></div>
+                </div>
+              </a>
+            </article>
 
-          <article class="project">
-            <a href="#">
-              <img src="images/travel-agency-2.png" alt="Travel agency website design for Georgia" loading="lazy" decoding="async">
-              <div class="project-body">
-                <h4>Travel Agency Website</h4>
-                <p>UI design for a Georgia-based travel agency, responsive for desktop and mobile.</p>
-                <div class="stack"><span class="chip">UI/UX</span><span class="chip">Responsive</span></div>
-              </div>
-            </a>
-          </article>
+            <article class="project">
+              <a href="#">
+                <img src="images/travel-agency-2.png" alt="Travel agency website design for Georgia" loading="lazy" decoding="async">
+                <div class="project-body">
+                  <h4>Travel Agency Website</h4>
+                  <p>UI design for a Georgia-based travel agency, responsive for desktop and mobile.</p>
+                  <div class="stack"><span class="chip">UI/UX</span><span class="chip">Responsive</span></div>
+                </div>
+              </a>
+            </article>
 
-          <article class="project">
-            <a href="#">
-              <img src="images/grocery-app-3.png" alt="Grocery app design" loading="lazy" decoding="async">
-              <div class="project-body">
-                <h4>Grocery App</h4>
-                <p>Mobile-first grocery app design with intuitive navigation and cart flow.</p>
-                <div class="stack"><span class="chip">UI</span><span class="chip">Mobile</span></div>
-              </div>
-            </a>
-          </article>
+            <article class="project">
+              <a href="#">
+                <img src="images/grocery-app-3.png" alt="Grocery app design" loading="lazy" decoding="async">
+                <div class="project-body">
+                  <h4>Grocery App</h4>
+                  <p>Mobile-first grocery app design with intuitive navigation and cart flow.</p>
+                  <div class="stack"><span class="chip">UI</span><span class="chip">Mobile</span></div>
+                </div>
+              </a>
+            </article>
 
-          <article class="project">
-            <a href="https://dribbble.com/shots/24857889-Fresh-Juice-Website-Design">
-              <img src="images/landing.png" alt="Fresh juice landing page design" loading="lazy" decoding="async">
-              <div class="project-body">
-                <h4>Juice Landing Page</h4>
-                <p>Interactive landing page designed for a juice brand, optimized for engagement.</p>
-                <div class="stack"><span class="chip">UI/UX</span><span class="chip">Responsive</span></div>
-              </div>
-            </a>
-          </article>
+            <article class="project">
+              <a href="https://dribbble.com/shots/24857889-Fresh-Juice-Website-Design">
+                <img src="images/landing.png" alt="Fresh juice landing page design" loading="lazy" decoding="async">
+                <div class="project-body">
+                  <h4>Juice Landing Page</h4>
+                  <p>Interactive landing page designed for a juice brand, optimized for engagement.</p>
+                  <div class="stack"><span class="chip">UI/UX</span><span class="chip">Responsive</span></div>
+                </div>
+              </a>
+            </article>
+          </div>
         </div>
       </div>
 
-      <h3>💻 Development Projects</h3>
-      <div class="projects-wrapper">
-        <div class="projects">
-          <article class="project">
-            <a href="https://tina-asadi.github.io/Portfolio/">
-              <img src="images/portfolio.png" alt="Portfolio website homepage" loading="lazy" decoding="async">
-              <div class="project-body">
-                <h4>Portfolio Website</h4>
-                <p>Responsive personal portfolio showcasing my skills, projects, and certifications.</p>
-                <div class="stack"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
-              </div>
-            </a>
-          </article>
+      <div class="project-group" data-cat="dev" data-label="Development">
+        <h3>💻 Development Projects</h3>
+        <div class="projects-wrapper">
+          <div class="projects">
+            <article class="project">
+              <a href="projects/portfolio-website.html">
+                <img src="images/portfolio.png" alt="Portfolio website homepage" loading="lazy" decoding="async">
+                <div class="project-body">
+                  <h4>Portfolio Website</h4>
+                  <p>Responsive personal portfolio showcasing my skills, projects, and certifications.</p>
+                  <div class="stack"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
+                </div>
+              </a>
+            </article>
 
-          <article class="project">
-            <a href="https://tina-asadi.github.io">
-              <img src="images/bilingual-website-2.png" alt="Bilingual website homepage" loading="lazy" decoding="async">
-              <div class="project-body">
-                <h4>Bilingual Website</h4>
-                <p>Fully responsive bilingual website built using Bootstrap.</p>
-                <div class="stack"><span class="chip">Bootstrap</span><span class="chip">Bilingual</span></div>
-              </div>
-            </a>
-          </article>
+            <article class="project">
+              <a href="https://tina-asadi.github.io">
+                <img src="images/bilingual-website-2.png" alt="Bilingual website homepage" loading="lazy" decoding="async">
+                <div class="project-body">
+                  <h4>Bilingual Website</h4>
+                  <p>Fully responsive bilingual website built using Bootstrap.</p>
+                  <div class="stack"><span class="chip">Bootstrap</span><span class="chip">Bilingual</span></div>
+                </div>
+              </a>
+            </article>
 
-          <article class="project">
-            <a href="projects/travel-plan.html">
-              <img src="images/travel-plan.png" alt="Travel Plan app built with Razor Pages" loading="lazy" decoding="async">
-              <div class="project-body">
-                <h4>Travel Plan (Razor)</h4>
-                <p>Travel planning app prototype developed using Razor Pages.</p>
-                <div class="stack"><span class="chip">ASP.NET Razor</span><span class="chip">Web Dev</span></div>
-              </div>
-            </a>
-          </article>
+            <article class="project">
+              <a href="projects/travel-plan.html">
+                <img src="images/travel-plan.png" alt="Travel Plan app built with Razor Pages" loading="lazy" decoding="async">
+                <div class="project-body">
+                  <h4>Travel Plan (Razor)</h4>
+                  <p>Travel planning app prototype developed using Razor Pages.</p>
+                  <div class="stack"><span class="chip">ASP.NET Razor</span><span class="chip">Web Dev</span></div>
+                </div>
+              </a>
+            </article>
+          </div>
         </div>
       </div>
 
-      <h3>🔍 UX &amp; SEO Projects</h3>
-      <div class="projects-wrapper">
-        <div class="projects">
-          <article class="project">
-            <a href="#">
-              <img src="images/userflow.png" alt="User flow diagram for a redesigned navigation and checkout" loading="lazy" decoding="async">
-              <div class="project-body">
-                <h4>User Flow Design</h4>
-                <p>Redesigned navigation and checkout process to reduce user friction.</p>
-                <div class="stack"><span class="chip">UX</span><span class="chip">Wireframes</span></div>
-              </div>
-            </a>
-          </article>
+      <div class="project-group" data-cat="ux" data-label="UX &amp; SEO">
+        <h3>🔍 UX &amp; SEO Projects</h3>
+        <div class="projects-wrapper">
+          <div class="projects">
+            <article class="project">
+              <a href="#">
+                <img src="images/userflow.png" alt="User flow diagram for a redesigned navigation and checkout" loading="lazy" decoding="async">
+                <div class="project-body">
+                  <h4>User Flow Design</h4>
+                  <p>Redesigned navigation and checkout process to reduce user friction.</p>
+                  <div class="stack"><span class="chip">UX</span><span class="chip">Wireframes</span></div>
+                </div>
+              </a>
+            </article>
 
-          <article class="project">
-            <a href="#">
-              <img src="images/seo-report.png" alt="SEO audit report" loading="lazy" decoding="async">
-              <div class="project-body">
-                <h4>SEO Report</h4>
-                <p>Detailed SEO audit with actionable recommendations for ranking improvements.</p>
-                <div class="stack"><span class="chip">SEO</span><span class="chip">Analytics</span></div>
-              </div>
-            </a>
-          </article>
+            <article class="project">
+              <a href="projects/seo-report.html">
+                <img src="images/seo-report.png" alt="SEO audit report" loading="lazy" decoding="async">
+                <div class="project-body">
+                  <h4>SEO Report</h4>
+                  <p>Detailed SEO audit with actionable recommendations for ranking improvements.</p>
+                  <div class="stack"><span class="chip">SEO</span><span class="chip">Analytics</span></div>
+                </div>
+              </a>
+            </article>
 
-          <article class="project">
-            <a href="#">
-              <img src="images/pillar-cluster.png" alt="Pillar-cluster content strategy diagram" loading="lazy" decoding="async">
-              <div class="project-body">
-                <h4>Pillar Cluster SEO</h4>
-                <p>Developed a pillar-cluster content strategy to boost site authority and internal linking.</p>
-                <div class="stack"><span class="chip">SEO</span><span class="chip">Content Strategy</span></div>
-              </div>
-            </a>
-          </article>
+            <article class="project">
+              <a href="#">
+                <img src="images/pillar-cluster.png" alt="Pillar-cluster content strategy diagram" loading="lazy" decoding="async">
+                <div class="project-body">
+                  <h4>Pillar Cluster SEO</h4>
+                  <p>Developed a pillar-cluster content strategy to boost site authority and internal linking.</p>
+                  <div class="stack"><span class="chip">SEO</span><span class="chip">Content Strategy</span></div>
+                </div>
+              </a>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -311,7 +322,5 @@
   <footer>
     <p>© <span id="year"></span> Tina Asadi. All rights reserved.</p>
   </footer>
-  <script src="script.js" defer></script>
-  <script src="xray.js" defer></script>
 </body>
 </html>

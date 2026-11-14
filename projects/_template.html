@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--
+  CASE STUDY TEMPLATE
+  1. Copy this file to projects/your-project.html (use the same name for the link on the home page).
+  2. Replace every [bracketed] text and YOUR-... value. Delete the noindex line in <head>.
+  3. Put the project's images in images/your-project/ and use ../images/... paths in this file.
+  4. Keep, repeat or delete whole <article class="ch reveal"> chapters, and any block inside them:
+       <ul class="bullets">     a list of findings
+       <ol class="steps">       a short process timeline
+       <div class="cards">      decision or feature cards
+       <div class="gallery">    images (tall pages scroll inside their frame)
+       <div class="stage">     charts floating in 3D: transparent PNGs, each saved twice as name-light.png and
+                                name-dark.png (the site theme picks one); use class="float shot" for plain images
+       <div class="compare">    drag slider: before / after
+       <div class="prototype">  Figma (or any URL) embed, loaded only when the visitor asks
+       <div class="metrics">    count-up numbers (data-value and data-suffix drive the animation)
+       <div class="cta">        buttons and links
+  5. Update the chapter links in <nav class="rail"> so each href matches a chapter id.
+  6. Link to it from index.html: <a href="projects/your-project.html"> on the project card.
+  Styles live in css/case-study.css and behavior in js/case-study.js. Never add inline CSS or JS here.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project name | Case study | Tina Asadi</title>
+  <meta name="description" content="[About 150 characters: what this case study covers.]">
+  <link rel="canonical" href="https://tina-asadi.github.io/Portfolio/projects/YOUR-SLUG.html">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b0c0f">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Project name | Case study | Tina Asadi">
+  <meta property="og:description" content="[About 150 characters: what this case study covers.]">
+  <meta property="og:url" content="https://tina-asadi.github.io/Portfolio/projects/YOUR-SLUG.html">
+  <meta property="og:image" content="https://tina-asadi.github.io/Portfolio/images/your-project/cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Project name",
+      "description": "[About 150 characters: what this case study covers.]",
+      "image": "https://tina-asadi.github.io/Portfolio/images/your-project/cover.jpg",
+      "url": "https://tina-asadi.github.io/Portfolio/projects/_template.html",
+      "author": {
+          "@type": "Person",
+          "name": "Tina Asadi",
+          "url": "https://tina-asadi.github.io/Portfolio/"
+      }
+  }
+  </script>
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <script src="../js/theme-init.js"></script>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/case-study.css">
+  <link rel="stylesheet" href="../css/xray.css">
+  <script src="../js/site.js" defer></script>
+  <script src="../js/case-study.js" defer></script>
+  <script src="../js/xray.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" id="progress"></div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="../index.html"><span class="dot"></span>Tina Asadi</a>
+
+      <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+
+      <nav class="menu" id="menu" aria-label="Main">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#certifications">Certifications</a>
+        <a href="../index.html#contact" class="btn">Contact</a>
+        <button id="themeToggle" class="btn" type="button" aria-label="Toggle theme">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- Intro -->
+    <div class="cs-intro">
+      <span class="tag">Case study</span>
+      <h1>Project name</h1>
+      <p class="lead">One sentence: what you made, for whom, and why it matters.</p>
+      <dl class="cs-facts">
+        <div><dt>Role</dt><dd>Your role</dd></div>
+        <div><dt>Type</dt><dd>Personal / client / course project</dd></div>
+        <div><dt>Tools</dt><dd>Tool one, tool two</dd></div>
+        <div><dt>Focus</dt><dd>What it is about</dd></div>
+      </dl>
+      <div class="cs-cover"><img src="../images/your-project/cover.jpg" alt="[Describe the cover image]" fetchpriority="high" decoding="async"></div>
+    </div>
+
+    <div class="cs-layout">
+      <nav class="rail" aria-label="Chapters">
+        <a href="#plan">The plan</a>
+        <a href="#idea">The idea</a>
+        <a href="#design">Design</a>
+        <a href="#prototype">The prototype</a>
+        <a href="#result">The result</a>
+      </nav>
+
+      <div>
+    <article class="ch reveal" id="plan">
+      <p class="ch-num" aria-hidden="true">01</p>
+      <h2>The plan</h2>
+      <p>[What problem did you set out to solve, and for whom?]</p>
+      <ul class="bullets">
+        <li>[A finding, a goal or a requirement]</li>
+        <li>[Another one]</li>
+      </ul>
+      <ol class="steps">
+        <li class="step"><b>1. First step</b><span>[What you did]</span></li>
+        <li class="step"><b>2. Second step</b><span>[What you did]</span></li>
+        <li class="step"><b>3. Third step</b><span>[What you did]</span></li>
+      </ol>
+    </article>
+
+    <article class="ch reveal" id="idea">
+      <p class="ch-num" aria-hidden="true">02</p>
+      <h2>The idea</h2>
+      <p>[How did the idea form? What did you explore and reject?]</p>
+      <div class="cards">
+        <div class="cs-card"><h3>Decision 1</h3><p>[What you chose, and why.]</p></div>
+        <div class="cs-card"><h3>Decision 2</h3><p>[What you chose, and why.]</p></div>
+      </div>
+    </article>
+
+    <article class="ch reveal" id="design">
+      <p class="ch-num" aria-hidden="true">03</p>
+      <h2>Design</h2>
+      <p>[Show your sketches, wireframes or report pages. What did you learn from them?]</p>
+      <div class="gallery">
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="[Describe the image for someone who cannot see it]"><img src="../images/your-project/page-1.jpg" alt="[Describe the image for someone who cannot see it]" loading="lazy" decoding="async"></figure>
+      </div>
+      <div class="stage">
+        <div class="stage-inner">
+        <figure class="float z2">
+          <img class="chart-light" src="../images/your-project/chart-name-light.png" alt="[Describe the chart]" loading="lazy" decoding="async">
+          <img class="chart-dark" src="../images/your-project/chart-name-dark.png" alt="[Describe the chart]" loading="lazy" decoding="async">
+        </figure>
+        </div>
+      </div>
+      <div class="compare">
+        <img src="../images/your-project/before.jpg" alt="Before design" loading="lazy" decoding="async">
+        <div class="compare-top"><img src="../images/your-project/after.jpg" alt="After design" loading="lazy" decoding="async"></div>
+        <span class="compare-label is-left">Before</span>
+        <span class="compare-label is-right">After</span>
+        <div class="compare-line"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Reveal after over before">
+      </div>
+      <p class="hint">Drag the handle, or use the arrow keys.</p>
+    </article>
+
+    <article class="ch reveal" id="prototype">
+      <p class="ch-num" aria-hidden="true">04</p>
+      <h2>The prototype</h2>
+      <p>[Describe the flow you tested.]</p>
+      <div class="prototype" data-embed="https://www.figma.com/embed?embed_host=share&amp;url=YOUR-FIGMA-SHARE-LINK" data-title="Interactive prototype">
+        <div class="prototype-intro">
+          <p>Try the clickable prototype right here.</p>
+          <div class="cta"><button type="button" class="btn-primary" data-launch>Launch prototype</button><a class="btn-ghost" href="https://www.figma.com/proto/YOUR-LINK" target="_blank" rel="noopener">Open in Figma</a></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="ch reveal" id="result">
+      <p class="ch-num" aria-hidden="true">05</p>
+      <h2>The result</h2>
+      <p>[What shipped? What was the outcome?]</p>
+      <div class="metrics">
+        <div class="metric" data-value="3" data-suffix=""><strong>3</strong><span>[A real number you can stand behind]</span></div>
+      </div>
+      <ul class="bullets">
+        <li>[What you would do differently]</li>
+        <li>[What you are proud of]</li>
+      </ul>
+      <div class="cta">
+        <a class="btn-primary" href="https://example.com" target="_blank" rel="noopener">View the live site</a>
+      </div>
+    </article>
+      </div>
+    </div>
+
+    <nav class="pager" aria-label="More projects">
+      <a href="seo-report.html"><small>← Previous</small>[Previous project]</a>
+      <span></span>
+    </nav>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Tina Asadi. All rights reserved.</p>
+  </footer>
+</body>
+</html>
