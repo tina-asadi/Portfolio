@@ -173,3 +173,6 @@
 /* Fill-in placeholders: highlighted so they cannot be missed. Remove the <mark> tags once real figures are in. */
 .ch mark { background: color-mix(in srgb, #f59e0b 28%, transparent); color: inherit; padding: 0 .25em; border-radius: 4px; }
 .metric strong:empty::before, .metric strong { overflow-wrap: anywhere; }
+
+/* Small heading between blocks inside a chapter */
+.ch h3.sub { margin: 2.2rem 0 .8rem; font-size: 1.15rem; }
