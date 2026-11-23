@@ -8,17 +8,18 @@
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* Run `fn` once when `el` is mostly on screen */
-  const onceVisible = (el, fn, threshold = 0.6) => {
+  const onceVisible = (el, fn, threshold = 0.6, rootMargin = '0px') => {
     const io = new IntersectionObserver(([entry]) => {
       if (!entry.isIntersecting) return;
       io.disconnect();
       fn();
-    }, { threshold });
+    }, { threshold, rootMargin });
     io.observe(el);
   };
 
   /* ---------- 1. Scroll reveal ---------- */
-  $$('.reveal').forEach((el) => onceVisible(el, () => el.classList.add('in'), 0.12));
+  // Threshold 0: a very tall chapter (long wireframes) must reveal as soon as its top enters, not when 12% of it is visible
+  $$('.reveal').forEach((el) => onceVisible(el, () => el.classList.add('in'), 0, '0px 0px -60px 0px'));
 
   /* ---------- 2. Chapter rail: highlight the chapter being read ---------- */
   const railLinks = $$('.rail a');
