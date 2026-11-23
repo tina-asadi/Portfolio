@@ -68,18 +68,14 @@ section { padding: clamp(2.5rem, 7vw, 3.5rem) 0; border-top: 1px solid var(--bor
 .contact-card p { margin: 0; }
 
 /* ---------- 7. Projects ---------- */
-#projects h3 { margin: 2rem 0 1rem; font-size: 1.3rem; }
-.projects-wrapper { position: relative; padding: 0 4rem; }  /* gutter for the arrow buttons */
+/* All projects in one responsive grid */
 .projects {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 1.25rem;
   padding: 10px 2px 1rem;
 }
 .project {
-  flex: 0 0 300px;
-  scroll-snap-align: start;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 16px;
@@ -101,65 +97,6 @@ section { padding: clamp(2.5rem, 7vw, 3.5rem) 0; border-top: 1px solid var(--bor
 .projects-filtering .project:not(.is-match):hover { opacity: .7; }
 .projects-filtering .project.is-match { border-color: var(--accent); }
 
-.scroll-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-  background: color-mix(in srgb, var(--card) 85%, transparent);
-  color: var(--text);
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 10;
-  box-shadow: var(--shadow);
-  transition: transform .2s ease, opacity .2s ease;
-}
-.scroll-btn:hover { transform: translateY(-50%) scale(1.05); }
-.scroll-btn[hidden] { display: none; }
-.scroll-btn.left { left: 0; }
-.scroll-btn.right { right: 0; }
-
-/* Category tabs + carousel counter and dots (shown on phones only) */
-.project-group { position: relative; }
-.cat-tabs, .carousel-ui { display: none; }
-.cat-tabs { gap: .5rem; overflow-x: auto; margin: 0 0 .5rem; padding: .25rem 0; scrollbar-width: none; }
-.cat-tabs::-webkit-scrollbar { display: none; }
-.cat-chip {
-  flex: none;
-  min-height: 44px;
-  padding: 0 1rem;
-  font: inherit;
-  font-weight: 600;
-  white-space: nowrap;
-  color: var(--text);
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  cursor: pointer;
-}
-.cat-chip[aria-pressed="true"] { background: var(--brand); border-color: var(--brand); color: #fff; }
-.cat-chip:disabled { opacity: .4; cursor: default; }
-.cat-count { margin-left: .4rem; font-weight: 500; opacity: .75; }
-.carousel-ui { flex-direction: column; align-items: center; gap: .1rem; }
-.carousel-count { margin: 0; font-size: .9rem; color: var(--subtle); font-variant-numeric: tabular-nums; }
-.carousel-dots { display: flex; justify-content: center; flex-wrap: wrap; }
-.carousel-dot { width: 28px; height: 44px; display: grid; place-items: center; padding: 0; border: 0; background: none; cursor: pointer; }
-.carousel-dot::before { content: ""; width: 8px; height: 8px; border-radius: 999px; background: var(--border); transition: width .25s ease, background .25s ease; }
-.carousel-dot[aria-current="true"]::before { width: 22px; background: var(--accent); }
-
-/* The centred card grows slightly as you swipe (browsers without scroll-driven animation skip it) */
-@keyframes card-focus { 0%, 100% { transform: scale(.92); opacity: .65; } 50% { transform: none; opacity: 1; } }
-@media (max-width: 640px) and (prefers-reduced-motion: no-preference) {
-  @supports (animation-timeline: view(inline)) {
-    .project { animation: card-focus linear both; animation-timeline: view(inline); animation-range: entry 0% exit 100%; }
-  }
-}
 
 /* ---------- 8. Case viewer (dialog) ---------- */
 .case {
@@ -278,22 +215,6 @@ html:has(dialog.case[open]) { overflow: hidden; }
   .facts, .certs, .contact-row { grid-template-columns: 1fr; }
   .cta { flex-direction: column; }
 
-  /* Project carousel: one centred card per swipe, neighbours peek in */
-  .projects-wrapper { padding: 0; }
-  .projects {
-    --card-w: min(78vw, 320px);
-    gap: .75rem;
-    padding-inline: calc((100% - var(--card-w)) / 2);
-    overscroll-behavior-x: contain;
-    scrollbar-width: none;
-  }
-  .projects::-webkit-scrollbar { display: none; }
-  .project { flex: 0 0 var(--card-w); scroll-snap-align: center; scroll-snap-stop: always; }
-  .scroll-btn { display: none; }
-  .carousel-ui { display: flex; }
-  .js-groups .cat-tabs { display: flex; }
-  .js-groups .project-group.is-off { display: none; }
-  .js-groups .project-group > h3 { position: absolute; width: 1px; height: 1px; margin: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .projects-filtering .project:not(.is-match) { display: none; }
 
   /* Case study opens as a bottom sheet */

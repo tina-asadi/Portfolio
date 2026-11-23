@@ -1,155 +1,17 @@
 /* home.js: the home page only
-   1 Project carousels · 2 Skill filter · 3 Case viewer · 4 Hero lens */
+   1 Projects · 2 Skill filter · 3 Case viewer · 4 Hero lens */
 (() => {
   'use strict';
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- 1. Project carousels ----------
-     Desktop: three rows with arrow buttons (shown only when there is more to scroll).
-     Phone: category chips pick ONE carousel; a counter and dots show position. */
+  /* ---------- 1. Projects ----------
+     All projects sit in one grid, so there is nothing to scroll or switch. */
   const projects = $$('#projects .project');
   const projectsSection = $('#projects');
-  const phone = matchMedia('(max-width: 640px)');
-
-  const carousel = (() => {
-    const groups = $$('#projects .project-group');
-    const states = [];
-    const tabBtns = new Map();
-    let activeCat = groups[0]?.dataset.cat;
-    let tabs = null;
-
-    // A card counts when no skill filter is active, or when it matches the filter
-    const isShown = (card) => !projectsSection.classList.contains('projects-filtering') || card.classList.contains('is-match');
-    const shownCards = (row) => $$('.project', row).filter(isShown);
-
-    function scrollToCard(row, card) {
-      const offset = phone.matches ? (row.clientWidth - card.offsetWidth) / 2 : 2;   // centred on phones
-      const left = row.scrollLeft + card.getBoundingClientRect().left - row.getBoundingClientRect().left - offset;
-      row.scrollTo({ left: Math.max(left, 0), behavior: reduceMotion ? 'auto' : 'smooth' });
-    }
-
-    function update(st) {
-      const { row, left, right, counter, dots } = st;
-      left.hidden = row.scrollLeft <= 2;
-      right.hidden = row.scrollLeft + row.clientWidth >= row.scrollWidth - 2;
-      if (!row.clientWidth) return;                                 // group is hidden
-      const cards = shownCards(row);
-      const rect = row.getBoundingClientRect();
-      const mid = rect.left + rect.width / 2;
-      let best = 0;
-      let bestDist = Infinity;
-      cards.forEach((card, i) => {
-        const r = card.getBoundingClientRect();
-        const dist = Math.abs(r.left + r.width / 2 - mid);
-        if (dist < bestDist) { bestDist = dist; best = i; }
-      });
-      const text = cards.length ? `${best + 1} / ${cards.length}` : '';
-      if (counter.textContent !== text) counter.textContent = text;
-      $$('button', dots).forEach((b, i) => b.setAttribute('aria-current', String(i === best)));
-    }
-
-    function buildDots(st) {
-      const cards = shownCards(st.row);
-      st.dots.replaceChildren(...cards.map((card, i) => {
-        const b = document.createElement('button');
-        b.type = 'button';
-        b.className = 'carousel-dot';
-        b.setAttribute('aria-label', `Go to project ${i + 1} of ${cards.length}: ${$('h4', card).textContent}`);
-        b.addEventListener('click', () => scrollToCard(st.row, card));
-        return b;
-      }));
-    }
-
-    groups.forEach((group) => {
-      const wrapper = $('.projects-wrapper', group);
-      const row = $('.projects', wrapper);
-      if (!row) return;
-
-      const arrow = (dir, label, glyph) => {
-        const b = document.createElement('button');
-        b.type = 'button';
-        b.className = `scroll-btn ${dir}`;
-        b.setAttribute('aria-label', label);
-        b.textContent = glyph;
-        b.addEventListener('click', () => {
-          row.scrollBy({ left: (dir === 'left' ? -1 : 1) * row.clientWidth * 0.8, behavior: reduceMotion ? 'auto' : 'smooth' });
-        });
-        return b;
-      };
-      const counter = document.createElement('p');
-      counter.className = 'carousel-count';
-      counter.setAttribute('aria-live', 'polite');
-      const dots = document.createElement('div');
-      dots.className = 'carousel-dots';
-      const ui = document.createElement('div');
-      ui.className = 'carousel-ui';
-      ui.append(counter, dots);
-
-      const st = { group, row, counter, dots, left: arrow('left', 'Scroll projects left', '‹'), right: arrow('right', 'Scroll projects right', '›') };
-      wrapper.append(st.left, st.right, ui);
-      states.push(st);
-
-      let ticking = false;
-      row.addEventListener('scroll', () => {
-        if (ticking) return;
-        ticking = true;
-        requestAnimationFrame(() => { ticking = false; update(st); });
-      }, { passive: true });
-      new ResizeObserver(() => update(st)).observe(row);
-    });
-
-    function setCategory(cat) {
-      activeCat = cat;
-      groups.forEach((g) => g.classList.toggle('is-off', g.dataset.cat !== cat));
-      tabBtns.forEach(({ b }, c) => b.setAttribute('aria-pressed', String(c === cat)));
-      const st = states.find((s) => s.group.dataset.cat === cat);
-      if (st) { st.row.scrollLeft = 0; update(st); }
-    }
-
-    if (groups.length > 1) {
-      tabs = document.createElement('div');
-      tabs.className = 'cat-tabs';
-      tabs.setAttribute('role', 'group');
-      tabs.setAttribute('aria-label', 'Project categories');
-      groups.forEach((g) => {
-        const b = document.createElement('button');
-        b.type = 'button';
-        b.className = 'cat-chip';
-        const count = document.createElement('span');
-        count.className = 'cat-count';
-        b.append(g.dataset.label || g.dataset.cat, count);
-        b.addEventListener('click', () => setCategory(g.dataset.cat));
-        tabBtns.set(g.dataset.cat, { b, count });
-        tabs.appendChild(b);
-      });
-      groups[0].before(tabs);
-      projectsSection.classList.add('js-groups');
-    }
-
-    // Recount, rebuild dots, and move to a category that still has projects (used by the skill filter)
-    function refresh() {
-      const count = (g) => $$('.project', g).filter(isShown).length;
-      groups.forEach((g) => {
-        const t = tabBtns.get(g.dataset.cat);
-        if (!t) return;
-        const n = count(g);
-        t.count.textContent = n;
-        t.b.disabled = n === 0;
-      });
-      const current = groups.find((g) => g.dataset.cat === activeCat);
-      if (tabs && current && count(current) === 0) {
-        const next = groups.find((g) => count(g) > 0);
-        if (next) activeCat = next.dataset.cat;
-      }
-      states.forEach(buildDots);
-      if (tabs) setCategory(activeCat); else states.forEach(update);
-    }
-
-    refresh();
-    return { refresh, scrollToCard };
-  })();
+  // The card image that is visible in the current theme (cards hold a light and a dark image)
+  const shownImg = (card) => $$('img', card).find((i) => i.offsetParent !== null) || $('img', card);
 
   /* ---------- 2. Skill filter: pick a skill to highlight the projects that use it ---------- */
   (() => {
@@ -200,7 +62,6 @@
       projects.forEach((p) => p.classList.remove('is-match'));
       projectsSection.classList.remove('projects-filtering');
       status.textContent = '';
-      carousel.refresh();
     }
 
     function selectSkill(pill) {
@@ -218,16 +79,6 @@
 
       projectsSection.classList.add('projects-filtering');
       hits.forEach((p) => p.classList.add('is-match'));
-      carousel.refresh();                              // recount tabs and dots; phones hide non-matches
-
-      // Bring the first match in each row into view (desktop)
-      if (!phone.matches) {
-        $$('#projects .projects').forEach((row) => {
-          const first = hits.find((p) => row.contains(p));
-          if (first) carousel.scrollToCard(row, first);
-        });
-      }
-
       status.textContent = `${hits.length} ${hits.length === 1 ? 'project uses' : 'projects use'} ${name}. `;
       status.append(
         button('See them', () => projectsSection.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' })),
@@ -264,7 +115,7 @@
     let current = null;
 
     function fill(project) {
-      const img = $('img', project);
+      const img = shownImg(project);
       const href = $('a', project)?.getAttribute('href');
       hero.src = img.currentSrc || img.src;
       hero.alt = img.alt;
@@ -306,7 +157,7 @@
 
     function openCase(project) {
       current = project;
-      const cardImg = $('img', project);
+      const cardImg = shownImg(project);
       fill(project);
       cardImg.style.viewTransitionName = 'case-hero';
       transition(() => {
@@ -319,7 +170,7 @@
 
     function closeCase() {
       if (!dlg.open || !current) return;
-      const cardImg = $('img', current);
+      const cardImg = shownImg(current);
       const t = transition(() => {
         hero.style.viewTransitionName = '';
         dlg.close();

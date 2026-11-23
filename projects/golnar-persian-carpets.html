@@ -1,17 +1,18 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Golnar Persian Carpets | Case study | Tina Asadi</title>
-  <meta name="description" content="A concept online store for hand-knotted Persian carpets that teaches visitors how to read a carpet before they buy one, with a knot-density calculator and private viewings.">
-  <link rel="canonical" href="https://tina-asadi.github.io/Portfolio/projects/golnar.html">
+  <meta name="description" content="A concept store for hand-knotted Persian carpets that teaches visitors how to read a carpet before they buy one. Every carpet is generated in code.">
+  <link rel="canonical" href="https://tina-asadi.github.io/Portfolio/projects/golnar-persian-carpets.html">
   <meta name="theme-color" content="#0b0c0f">
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="Golnar Persian Carpets | Case study | Tina Asadi">
-  <meta property="og:description" content="A concept online store for hand-knotted Persian carpets that teaches visitors how to read a carpet before they buy one, with a knot-density calculator and private viewings.">
-  <meta property="og:url" content="https://tina-asadi.github.io/Portfolio/projects/golnar.html">
-  <meta property="og:image" content="https://tina-asadi.github.io/Portfolio/images/golnar/cover.jpg">
+  <meta property="og:description" content="A concept store for hand-knotted Persian carpets that teaches visitors how to read a carpet before they buy one. Every carpet is generated in code.">
+  <meta property="og:url" content="https://tina-asadi.github.io/Portfolio/projects/golnar-persian-carpets.html">
+  <meta property="og:image" content="https://tina-asadi.github.io/Portfolio/images/golnar/home-light.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <script type="application/ld+json">
@@ -19,9 +20,9 @@
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": "Golnar Persian Carpets",
-      "description": "A concept online store for hand-knotted Persian carpets that teaches visitors how to read a carpet before they buy one, with a knot-density calculator and private viewings.",
-      "image": "https://tina-asadi.github.io/Portfolio/images/golnar/cover.jpg",
-      "url": "https://tina-asadi.github.io/Portfolio/projects/golnar.html",
+      "description": "A concept store for hand-knotted Persian carpets that teaches visitors how to read a carpet before they buy one. Every carpet is generated in code.",
+      "image": "https://tina-asadi.github.io/Portfolio/images/golnar/home-light.jpg",
+      "url": "https://tina-asadi.github.io/Portfolio/projects/golnar-persian-carpets.html",
       "author": {
           "@type": "Person",
           "name": "Tina Asadi",
@@ -66,21 +67,23 @@
     <div class="cs-intro">
       <span class="tag">Case study</span>
       <h1>Golnar Persian Carpets</h1>
-      <p class="lead">A concept store for hand-knotted Persian carpets that teaches the buyer how to read a carpet before asking them to buy one.</p>
+      <p class="lead">A concept store for hand-knotted Persian carpets that teaches the buyer how to read a carpet before asking them to buy one. Every carpet on the site is drawn knot by knot in code.</p>
       <dl class="cs-facts">
-        <div><dt>Role</dt><dd>Design and development</dd></div>
+        <div><dt>Role</dt><dd>Designer and developer (solo)</dd></div>
         <div><dt>Type</dt><dd>Concept store</dd></div>
-        <div><dt>Tools</dt><dd>HTML, CSS, JavaScript</dd></div>
-        <div><dt>Focus</dt><dd>Storytelling, e-commerce, English and Persian script</dd></div>
+        <div><dt>Tools</dt><dd>HTML, CSS, JavaScript, Canvas</dd></div>
+        <div><dt>Focus</dt><dd>Storytelling, e-commerce, English and Persian type</dd></div>
       </dl>
-      <div class="cs-cover cs-cover--16x10"><img class="img-light" src="../images/golnar/home-light.jpg" alt="Golnar home page: the headline “Every knot, tied by hand” beside a hand-knotted carpet drawn in code" width="1440" height="900" fetchpriority="high" decoding="async"><img class="img-dark" src="../images/golnar/home-dark.jpg" alt="Golnar home page: the headline “Every knot, tied by hand” beside a hand-knotted carpet drawn in code" width="1440" height="900" fetchpriority="high" decoding="async"></div>
+      <div class="cs-cover cs-cover--16x10"><img class="img-light" src="../images/golnar/home-light.jpg" alt="Golnar home page: the headline “Every knot, tied by hand” beside a hand-knotted carpet" width="1440" height="900" fetchpriority="high" decoding="async"><img class="img-dark" src="../images/golnar/home-dark.jpg" alt="Golnar home page: the headline “Every knot, tied by hand” beside a hand-knotted carpet" width="1440" height="900" fetchpriority="high" decoding="async"></div>
     </div>
 
     <div class="cs-layout">
       <nav class="rail" aria-label="Chapters">
         <a href="#plan">The plan</a>
         <a href="#idea">The idea</a>
-        <a href="#design">Design</a>
+        <a href="#low-fidelity">Low fidelity</a>
+        <a href="#high-fidelity">Low to high fidelity</a>
+        <a href="#build">Building it</a>
         <a href="#prototype">The prototype</a>
         <a href="#result">The result</a>
       </nav>
@@ -90,53 +93,67 @@
       <p class="ch-num" aria-hidden="true">01</p>
       <h2>The plan</h2>
       <p>A hand-knotted carpet costs thousands of dollars, and most buyers do not know the words used to describe one: knot count, city, dye, field and border. A normal shop grid would ask for money before earning any trust. Golnar is a concept store built around the opposite order: learn first, then choose, then visit.</p>
+      <p>I set the goals before drawing anything, and a design problem showed up straight away: a carpet shop lives on photography, and I had none. That pushed the project in an unusual direction, described in the next chapter.</p>
       <ul class="bullets">
-        <li>Make eight weaving cities the way people browse, because the city tells you the style of a carpet.</li>
+        <li>Make the weaving cities the way people browse, because the city tells you the style of a carpet.</li>
         <li>Make every piece feel like what it is: one of a kind, with a story, a size and a knot count.</li>
-        <li>Teach the vocabulary in the page itself, in English and in Persian script.</li>
-        <li>Replace a risky online checkout with a private viewing in a showroom, at home or on a video call.</li>
+        <li>Teach the vocabulary inside the page, in English and in Persian script.</li>
+        <li>Replace a risky online checkout with a private viewing.</li>
+        <li>Work in a light and a dark theme, on desktop and on a phone.</li>
       </ul>
       <ol class="steps">
-        <li class="step"><b>1. Shop</b><span>Browse by weaving city and size, and add pieces to a bag.</span></li>
-        <li class="step"><b>2. Learn</b><span>Read a carpet, then see how it is made.</span></li>
-        <li class="step"><b>3. Feel the craft</b><span>A knot-density calculator makes “months on the loom” concrete.</span></li>
-        <li class="step"><b>4. Visit</b><span>Book an appointment instead of paying blind.</span></li>
+        <li class="step"><b>1. Brief</b><span>Decide what a buyer needs to understand before trusting a price</span></li>
+        <li class="step"><b>2. Define</b><span>Order the page: shop, learn, see the craft, visit</span></li>
+        <li class="step"><b>3. Wireframe</b><span>Structure first, with no colour</span></li>
+        <li class="step"><b>4. Design</b><span>Cream and navy surfaces, a serif headline, small gold labels</span></li>
+        <li class="step"><b>5. Build</b><span>Plain HTML, CSS, JavaScript and a canvas</span></li>
+        <li class="step"><b>6. Test</b><span>Desktop and phone widths, both themes, keyboard use</span></li>
       </ol>
-
     </article>
 
     <article class="ch reveal" id="idea">
       <p class="ch-num" aria-hidden="true">02</p>
       <h2>The idea</h2>
-      <p>The page works like a gallery guide. It starts with a single carpet, the headline “Every knot, tied by hand”, and lets the visitor move across the carpet to see each knot. Everything after it follows the same promise: nothing is hidden, and every detail is explained.</p>
+      <p>The page works like a gallery guide. It opens with one carpet and the line “Every knot, tied by hand”, and everything after it keeps the same promise: nothing is hidden, and every detail is explained. Without photographs, the carpets themselves had to be generated.</p>
       <div class="cards">
-        <div class="cs-card"><h3>Cities as navigation</h3><p>Kashan, Tabriz, Isfahan, Nain, Qom, Heriz, Kerman and Bijar, each with its Persian name, filter the collection.</p></div>
-        <div class="cs-card"><h3>One of one</h3><p>Every carpet shows its number, city, size, raj and knots per square metre. When a piece is reserved, it leaves the collection.</p></div>
-        <div class="cs-card"><h3>Read a carpet</h3><p>An interactive diagram names the parts, from the central medallion (toranj) to the fringe (rishe), in English and Persian script.</p></div>
-        <div class="cs-card"><h3>From fleece to floor</h3><p>Five stages, from spinning to clipping, plus a “dye garden” of five natural dyes: madder, indigo, pomegranate rind, weld and walnut husk.</p></div>
-        <div class="cs-card"><h3>What a raj means</h3><p>Sliders for raj, size and number of weavers calculate knots per square inch, total knots and months on the loom, and redraw the knots.</p></div>
-        <div class="cs-card"><h3>A bag that leads to a viewing</h3><p>The bag reserves pieces and promises white-glove delivery in Canada, and the visit form books a showing in Toronto.</p></div>
+        <div class="cs-card"><h3>Carpets drawn in code</h3><p>Each carpet is a grid of knots painted to a canvas from a palette and a pattern. The same carpet number always draws the same carpet, so nothing needs a photo.</p></div>
+        <div class="cs-card"><h3>Cities as navigation</h3><p>Kashan, Tabriz, Isfahan, Nain, Qom, Heriz, Kerman and Bijar, each with its Persian name, filter the collection, and every city has its own palette and drawing style.</p></div>
+        <div class="cs-card"><h3>One of one</h3><p>Every carpet shows its number, size, raj and knot count, and the story behind it, in a detail view.</p></div>
+        <div class="cs-card"><h3>A loupe for the knots</h3><p>Move across a carpet and a loupe magnifies the knots under the pointer, so you can see what hand-knotted means.</p></div>
+        <div class="cs-card"><h3>Read a carpet</h3><p>An interactive diagram names each part of a carpet, from the medallion to the fringe, with the Persian word beside the English one.</p></div>
+        <div class="cs-card"><h3>What a raj means</h3><p>Sliders for raj, size and weavers calculate knots per square inch, total knots and months on the loom, and redraw the knots.</p></div>
+        <div class="cs-card"><h3>A viewing, not a checkout</h3><p>The bag reserves pieces, and a form books a private viewing instead of taking payment on the spot.</p></div>
       </div>
-
     </article>
 
-    <article class="ch reveal" id="design">
+    <article class="ch reveal" id="low-fidelity">
       <p class="ch-num" aria-hidden="true">03</p>
-      <h2>Design</h2>
-      <p>The layout is quiet on purpose, so the carpets provide the colour: cream and navy surfaces, a serif headline, and small gold labels. Drag the handle to compare the first wireframe with the finished page.</p>
+      <h2>Low fidelity</h2>
+      <p>I started in grayscale on purpose. With no colour or imagery, I could only judge structure: what comes first, how much each section needs, and where the eye goes.</p>
+      <p>The home page is a single message and one carpet. The collection is a grid with two rows of filters above it, one for city and one for size. Everything below the collection teaches. The wireframes below show those decisions.</p>
+      <div class="gallery">
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Wireframe of the Golnar home page"><img class="img-light" src="../images/golnar/home-lo-light.jpg" alt="Wireframe of the Golnar home page" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/home-lo-dark.jpg" alt="Wireframe of the Golnar home page" width="1440" height="900" loading="lazy" decoding="async"></figure>
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Wireframe of the collection grid with city and size filters"><img class="img-light" src="../images/golnar/collection-lo-light.jpg" alt="Wireframe of the collection grid with city and size filters" width="1275" height="1500" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/collection-lo-dark.jpg" alt="Wireframe of the collection grid with city and size filters" width="1275" height="1500" loading="lazy" decoding="async"></figure>
+      </div>
+    </article>
+
+    <article class="ch reveal" id="high-fidelity">
+      <p class="ch-num" aria-hidden="true">04</p>
+      <h2>Low to high fidelity</h2>
+      <p>High fidelity meant turning structure into mood. A quiet cream or navy surface lets the carpets carry the colour, a serif headline sets the tone, and small gold labels mark facts. The light and dark themes come from the same set of variables, and a Persian script font sits beside the English where a word needs it.</p>
+      <p>Drag each slider to compare the wireframe with the finished page. The layout barely moved, which was the point.</p>
       <div class="compare compare--16x10">
-        <img class="img-light" src="../images/golnar/home-light.jpg" alt="High fidelity Golnar home page" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/home-dark.jpg" alt="High fidelity Golnar home page" width="1440" height="900" loading="lazy" decoding="async">
-        <div class="compare-top"><img class="img-light" src="../images/golnar/home-lo-light.jpg" alt="Low fidelity wireframe of the Golnar home page" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/home-lo-dark.jpg" alt="Low fidelity wireframe of the Golnar home page" width="1440" height="900" loading="lazy" decoding="async"></div>
+        <img class="img-light" src="../images/golnar/home-light.jpg" alt="Final home page" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/home-dark.jpg" alt="Final home page" width="1440" height="900" loading="lazy" decoding="async">
+        <div class="compare-top"><img class="img-light" src="../images/golnar/home-lo-light.jpg" alt="Wireframe of the home page" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/home-lo-dark.jpg" alt="Wireframe of the home page" width="1440" height="900" loading="lazy" decoding="async"></div>
         <span class="compare-label is-left">Wireframe</span>
         <span class="compare-label is-right">Final design</span>
         <div class="compare-line"></div>
         <input type="range" min="0" max="100" value="50" aria-label="Reveal the final design over the wireframe">
       </div>
       <p class="hint">Drag the handle, or use the arrow keys.</p>
-      <h3 class="sub">The collection</h3>
       <div class="compare compare--portrait">
-        <img class="img-light" src="../images/golnar/collection-light.jpg" alt="High fidelity collection grid of eight carpets" width="1275" height="1500" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/collection-dark.jpg" alt="High fidelity collection grid of eight carpets" width="1275" height="1500" loading="lazy" decoding="async">
-        <div class="compare-top"><img class="img-light" src="../images/golnar/collection-lo-light.jpg" alt="Low fidelity wireframe of the collection grid" width="1275" height="1500" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/collection-lo-dark.jpg" alt="Low fidelity wireframe of the collection grid" width="1275" height="1500" loading="lazy" decoding="async"></div>
+        <img class="img-light" src="../images/golnar/collection-light.jpg" alt="Final collection grid of eight carpets" width="1275" height="1500" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/collection-dark.jpg" alt="Final collection grid of eight carpets" width="1275" height="1500" loading="lazy" decoding="async">
+        <div class="compare-top"><img class="img-light" src="../images/golnar/collection-lo-light.jpg" alt="Wireframe of the collection grid" width="1275" height="1500" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/collection-lo-dark.jpg" alt="Wireframe of the collection grid" width="1275" height="1500" loading="lazy" decoding="async"></div>
         <span class="compare-label is-left">Wireframe</span>
         <span class="compare-label is-right">Final design</span>
         <div class="compare-line"></div>
@@ -146,48 +163,66 @@
       <h3 class="sub">Each part of the page</h3>
       <div class="gallery">
         <figure class="gallery-item" tabindex="0" role="region" aria-label="Collection filtered to a single weaving city"><img class="img-light" src="../images/golnar/filter-light.jpg" alt="Collection filtered to a single weaving city" width="1280" height="924" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/filter-dark.jpg" alt="Collection filtered to a single weaving city" width="1280" height="924" loading="lazy" decoding="async"></figure>
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Detail view of one carpet with size, density, knots and materials"><img class="img-light" src="../images/golnar/detail-light.jpg" alt="Detail view of one carpet with size, density, knots and materials" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/detail-dark.jpg" alt="Detail view of one carpet with size, density, knots and materials" width="1440" height="900" loading="lazy" decoding="async"></figure>
         <figure class="gallery-item" tabindex="0" role="region" aria-label="Interactive diagram naming the parts of a Persian carpet"><img class="img-light" src="../images/golnar/anatomy-light.jpg" alt="Interactive diagram naming the parts of a Persian carpet" width="1440" height="1031" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/anatomy-dark.jpg" alt="Interactive diagram naming the parts of a Persian carpet" width="1440" height="1031" loading="lazy" decoding="async"></figure>
         <figure class="gallery-item" tabindex="0" role="region" aria-label="The same diagram with the field part selected"><img class="img-light" src="../images/golnar/anatomy-field-light.jpg" alt="The same diagram with the field part selected" width="1440" height="1008" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/anatomy-field-dark.jpg" alt="The same diagram with the field part selected" width="1440" height="1008" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" tabindex="0" role="region" aria-label="The five stages of making a carpet and the dye garden"><img class="img-light" src="../images/golnar/making-light.jpg" alt="The five stages of making a carpet and the dye garden" width="1280" height="812" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/making-dark.jpg" alt="The five stages of making a carpet and the dye garden" width="1280" height="812" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" tabindex="0" role="region" aria-label="Knot-density calculator with sliders and a magnified square inch of knots"><img class="img-light" src="../images/golnar/density-light.jpg" alt="Knot-density calculator with sliders and a magnified square inch of knots" width="1440" height="745" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/density-dark.jpg" alt="Knot-density calculator with sliders and a magnified square inch of knots" width="1440" height="745" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" tabindex="0" role="region" aria-label="Private viewing booking form"><img class="img-light" src="../images/golnar/visit-light.jpg" alt="Private viewing booking form" width="1280" height="621" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/visit-dark.jpg" alt="Private viewing booking form" width="1280" height="621" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" tabindex="0" role="region" aria-label="The bag drawer with a reserved piece and delivery information"><img class="img-light" src="../images/golnar/bag-light.jpg" alt="The bag drawer with a reserved piece and delivery information" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/bag-dark.jpg" alt="The bag drawer with a reserved piece and delivery information" width="1440" height="900" loading="lazy" decoding="async"></figure>
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="The stages of making a carpet and the natural dyes"><img class="img-light" src="../images/golnar/making-light.jpg" alt="The stages of making a carpet and the natural dyes" width="1280" height="825" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/making-dark.jpg" alt="The stages of making a carpet and the natural dyes" width="1280" height="825" loading="lazy" decoding="async"></figure>
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Knot-density calculator with sliders"><img class="img-light" src="../images/golnar/density-light.jpg" alt="Knot-density calculator with sliders" width="1440" height="745" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/density-dark.jpg" alt="Knot-density calculator with sliders" width="1440" height="745" loading="lazy" decoding="async"></figure>
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Private viewing booking form"><img class="img-light" src="../images/golnar/visit-light.jpg" alt="Private viewing booking form" width="1280" height="605" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/visit-dark.jpg" alt="Private viewing booking form" width="1280" height="605" loading="lazy" decoding="async"></figure>
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="The bag drawer"><img class="img-light" src="../images/golnar/bag-light.jpg" alt="The bag drawer" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/bag-dark.jpg" alt="The bag drawer" width="1440" height="900" loading="lazy" decoding="async"></figure>
       </div>
+      <h3 class="sub">On a phone</h3>
       <div class="gallery phones">
         <figure class="gallery-item phone" tabindex="0" role="region" aria-label="Phone layout of the home page"><img class="img-light" src="../images/golnar/home-m-light.jpg" alt="Phone layout of the home page" width="390" height="844" loading="lazy" decoding="async"><img class="img-dark" src="../images/golnar/home-m-dark.jpg" alt="Phone layout of the home page" width="390" height="844" loading="lazy" decoding="async"></figure>
       </div>
+    </article>
 
+    <article class="ch reveal" id="build">
+      <p class="ch-num" aria-hidden="true">05</p>
+      <h2>Building it</h2>
+      <p>The site is plain HTML, CSS and JavaScript with no libraries. The part I am proudest of is that there are no carpet images at all.</p>
+      <div class="cards">
+        <div class="cs-card"><h3>The carpet generator</h3><p>A carpet is laid out as a grid of knots. Each knot gets a region (border, field, medallion, corner, fringe) and a colour index, then the grid is painted to a canvas. Heriz and Bijar switch to angular medallions.</p></div>
+        <div class="cs-card"><h3>Deterministic by design</h3><p>A small hash of the carpet number and position drives the pattern, so a carpet looks the same on every visit and in every screenshot.</p></div>
+        <div class="cs-card"><h3>A loupe, not a zoom</h3><p>The loupe reads the same knot grid, so magnifying a carpet shows real knots instead of blurry pixels.</p></div>
+        <div class="cs-card"><h3>Design tokens</h3><p>Colours are CSS variables. The dark theme swaps them, the page follows the visitor’s system setting, and a theme can be forced with a link parameter.</p></div>
+        <div class="cs-card"><h3>Safe storage</h3><p>The bag is saved in localStorage through a helper that never throws in private windows.</p></div>
+        <div class="cs-card"><h3>English and Persian</h3><p>Vazirmatn and Noto Nastaliq Urdu set the Persian words, and the layout copes with both scripts.</p></div>
+      </div>
     </article>
 
     <article class="ch reveal" id="prototype">
-      <p class="ch-num" aria-hidden="true">04</p>
+      <p class="ch-num" aria-hidden="true">06</p>
       <h2>The prototype</h2>
-      <p>The prototype is a working page. Filter the collection by city and size, add a piece to the bag, click through the parts of a carpet, and move the raj slider to watch the knots, the knot count and the months on the loom change.</p>
-      <div class="cta">
-        <a class="btn-primary" href="https://claude.ai/artifact/5SjuEUWvz87EtNKM6hikhx" target="_blank" rel="noopener">Open the prototype</a>
+      <p>The working site is the prototype. Launch it below, filter the collection by city and size, open a carpet, add it to the bag, read the carpet guide and move the raj slider to watch the knots change.</p>
+      <div class="prototype" data-embed="../demos/golnar/index.html" data-title="Golnar prototype">
+        <div class="prototype-intro">
+          <p>This is the real, working site.</p>
+          <div class="cta"><button type="button" class="btn-primary" data-launch>Launch the live site</button><a class="btn-ghost" href="../demos/golnar/index.html" target="_blank" rel="noopener">Open in a new tab</a></div>
+        </div>
       </div>
-
     </article>
 
     <article class="ch reveal" id="result">
-      <p class="ch-num" aria-hidden="true">05</p>
+      <p class="ch-num" aria-hidden="true">07</p>
       <h2>The result</h2>
-      <p>Golnar is a finished, single-page concept store. It shows that an expensive, traditional product can be sold with patience: explain it well, make it tangible, and then invite the buyer in.</p>
+      <p>Golnar is a finished, single-page concept store. It shows that an expensive, traditional product can be sold with patience: explain it well, make it tangible, then invite the buyer in.</p>
       <div class="metrics">
         <div class="metric" data-value="8" data-suffix=""><strong>8</strong><span>Carpets, one from each weaving city</span></div>
-        <div class="metric" data-value="6" data-suffix=""><strong>6</strong><span>Named parts in the carpet guide</span></div>
-        <div class="metric" data-value="5" data-suffix=""><strong>5</strong><span>Making stages</span></div>
-        <div class="metric" data-value="5" data-suffix=""><strong>5</strong><span>Natural dyes explained</span></div>
+        <div class="metric" data-value="0" data-suffix=""><strong>0</strong><span>Photographs used</span></div>
+        <div class="metric" data-value="2" data-suffix=""><strong>2</strong><span>Themes from one set of tokens</span></div>
+        <div class="metric" data-value="0" data-suffix=""><strong>0</strong><span>Libraries or frameworks</span></div>
       </div>
       <ul class="bullets">
         <li>Turning “knot density” into sliders makes an abstract number feel like time and labour.</li>
-        <li>Showing Persian script next to English respects the craft and helps visitors learn the real words.</li>
-        <li>Next: add real photography, a checkout for deposits, and a Persian-language version of the page.</li>
+        <li>Generating the carpets removed the biggest obstacle of the project, and made every carpet interactive in a way a photograph cannot be.</li>
+        <li>Showing Persian script beside English respects the craft and helps visitors learn the real words.</li>
+        <li>Next: real photography for a second collection, a checkout for deposits, and a Persian-language version of the page.</li>
       </ul>
       <div class="cta">
-        <a class="btn-primary" href="https://claude.ai/artifact/5SjuEUWvz87EtNKM6hikhx" target="_blank" rel="noopener">Open the prototype</a>
+        <a class="btn-primary" href="../demos/golnar/index.html" target="_blank" rel="noopener">View the live site</a>
+        <a class="btn-ghost" href="https://github.com/tina-asadi/Portfolio/tree/main/demos/golnar" target="_blank" rel="noopener">View the code</a>
       </div>
-
     </article>
 
       </div>
@@ -195,7 +230,7 @@
 
     <nav class="pager" aria-label="More projects">
       <a href="terracotta-table.html"><small>← Previous</small>Terracotta Table</a>
-      <span></span>
+      <a class="next" href="watch-store.html"><small>Next →</small>Watch Store</a>
     </nav>
   </main>
 

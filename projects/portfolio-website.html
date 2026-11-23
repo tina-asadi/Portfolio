@@ -97,7 +97,7 @@
       <ul class="bullets">
         <li>Several project cards linked to "#", so they went nowhere, and clicking them caused a JavaScript error.</li>
         <li>The mobile menu was hard-coded white, so it stayed light even in dark mode.</li>
-        <li>Each project category was its own horizontal scroller, so on a phone visitors met three carousels before seeing any project.</li>
+        <li>Projects were split into categories, each in its own horizontal scroller, so visitors had to scroll sideways to find work. With only web projects left, they now sit in one grid.</li>
         <li>The page had no meta description, social preview or structured data, and a stylesheet link pointed to a file that did not exist.</li>
         <li>Card hover effects were clipped inside the scrolling rows, and the layout had no clear tablet breakpoint.</li>
       </ul>
@@ -119,7 +119,7 @@
         <div class="cs-card"><h3>Show the process</h3><p>A "blueprint lens" follows the cursor over the hero and reveals the wireframe underneath. On touch screens a button does the same.</p></div>
         <div class="cs-card"><h3>Let skills prove themselves</h3><p>Tapping a skill highlights the projects that used it, so claims are linked to work.</p></div>
         <div class="cs-card"><h3>Tell the story</h3><p>Each project opens a case study that walks from plan to result, like this page.</p></div>
-        <div class="cs-card"><h3>One idea per screen on phones</h3><p>Category chips choose a single carousel, with a counter and dots so people always know where they are.</p></div>
+        <div class="cs-card"><h3>Everything in view</h3><p>All projects sit in one grid that stacks into a single column on phones, so nothing is hidden behind a scroller or a tab.</p></div>
         <div class="cs-card"><h3>Accessible by default</h3><p>Real buttons, visible focus, large tap targets, reduced-motion support and a menu that follows the theme.</p></div>
         <div class="cs-card"><h3>Search-friendly foundations</h3><p>Semantic structure, a clean heading order, meta tags and structured data from the start.</p></div>
       </div>
@@ -129,10 +129,10 @@
       <p class="ch-num" aria-hidden="true">03</p>
       <h2>Low fidelity</h2>
       <p>I started in grayscale on purpose. With no color, type or imagery to hide behind, I could only judge structure: what comes first, how much each section needs, and where the eye goes.</p>
-      <p>On desktop I kept one clear grid: a sticky header, a hero with the message on the left and a portrait on the right, then sections of cards. On mobile everything collapses to a single column, the menu moves behind a hamburger, and projects become one swipeable carousel. The numbered notes mark the decisions I wanted to defend.</p>
+      <p>On desktop I kept one clear grid: a sticky header, a hero with the message on the left and a portrait on the right, then sections of cards. On mobile everything collapses to a single column, the menu moves behind a hamburger, and projects stack into a single column. The numbered notes mark the decisions I wanted to defend.</p>
       <div class="gallery">
         <figure class="gallery-item" tabindex="0" role="region" aria-label="Full-page low fidelity wireframe of the desktop homepage"><img class="img-light" src="../images/portfolio-website/desktop-lowfi-full-light.jpg" alt="Full-page low fidelity wireframe of the desktop homepage" width="1600" height="3629" loading="lazy" decoding="async"><img class="img-dark" src="../images/portfolio-website/desktop-lowfi-full-dark.jpg" alt="Full-page low fidelity wireframe of the desktop homepage" width="1600" height="3629" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" tabindex="0" role="region" aria-label="Low fidelity wireframes of the mobile home screen, open menu and projects carousel"><img class="img-light" src="../images/portfolio-website/mobile-lowfi-light.jpg" alt="Low fidelity wireframes of the mobile home screen, open menu and projects carousel" width="1600" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/portfolio-website/mobile-lowfi-dark.jpg" alt="Low fidelity wireframes of the mobile home screen, open menu and projects carousel" width="1600" height="900" loading="lazy" decoding="async"></figure>
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Low fidelity wireframes of the mobile home screen, open menu and projects"><img class="img-light" src="../images/portfolio-website/mobile-lowfi-light.jpg" alt="Low fidelity wireframes of the mobile home screen, open menu and projects" width="1600" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/portfolio-website/mobile-lowfi-dark.jpg" alt="Low fidelity wireframes of the mobile home screen, open menu and projects" width="1600" height="900" loading="lazy" decoding="async"></figure>
       </div>
     </article>
 
@@ -142,7 +142,7 @@
       <p>Moving to high fidelity meant turning structure into feeling. I defined color tokens first (a dark and a light theme from the same variables), then type hierarchy, spacing and depth. A single mint accent marks anything interactive or active, so the page stays calm and the important things stand out.</p>
       <p>Drag the slider to compare the wireframe with the finished design. The layout barely moved, which was the point: the wireframe made the structural decisions, and fidelity only added polish. The mobile screens below show the same idea on a phone.</p>
       <div class="gallery">
-        <figure class="gallery-item" tabindex="0" role="region" aria-label="High fidelity mobile screens: home, open menu and projects carousel"><img class="img-light" src="../images/portfolio-website/mobile-hifi-light.jpg" alt="High fidelity mobile screens: home, open menu and projects carousel" width="1600" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/portfolio-website/mobile-hifi-dark.jpg" alt="High fidelity mobile screens: home, open menu and projects carousel" width="1600" height="900" loading="lazy" decoding="async"></figure>
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="High fidelity mobile screens: home, open menu and projects"><img class="img-light" src="../images/portfolio-website/mobile-hifi-light.jpg" alt="High fidelity mobile screens: home, open menu and projects" width="1600" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/portfolio-website/mobile-hifi-dark.jpg" alt="High fidelity mobile screens: home, open menu and projects" width="1600" height="900" loading="lazy" decoding="async"></figure>
         <figure class="gallery-item" tabindex="0" role="region" aria-label="Full-page high fidelity design of the desktop homepage"><img class="img-light" src="../images/portfolio-website/desktop-hifi-full-light.jpg" alt="Full-page high fidelity design of the desktop homepage" width="1600" height="3592" loading="lazy" decoding="async"><img class="img-dark" src="../images/portfolio-website/desktop-hifi-full-dark.jpg" alt="Full-page high fidelity design of the desktop homepage" width="1600" height="3592" loading="lazy" decoding="async"></figure>
       </div>
       <div class="compare">
@@ -163,8 +163,8 @@
       <div class="cards">
         <div class="cs-card"><h3>Design tokens</h3><p>Every color and shadow is a CSS variable. The dark and light themes just swap them, and the saved theme is applied before the first paint so the page never flashes.</p></div>
         <div class="cs-card"><h3>Blueprint lens</h3><p>At runtime the hero is cloned into a wireframe layer and revealed through a circle. The cursor only drives it with a mouse, and respects reduced motion.</p></div>
-        <div class="cs-card"><h3>Skill filter</h3><p>Skills map to the tags on each project. On desktop non-matching cards dim; on phones they leave the carousel.</p></div>
-        <div class="cs-card"><h3>Mobile carousel</h3><p>CSS scroll snapping gives one card per swipe, with the neighbors peeking in, a live counter and tappable dots.</p></div>
+        <div class="cs-card"><h3>Skill filter</h3><p>Skills map to the tags on each project. On desktop non-matching cards dim; on phones they leave the grid.</p></div>
+        <div class="cs-card"><h3>Themed project covers</h3><p>Each project card holds a light and a dark cover image, and CSS shows the one that matches the chosen theme.</p></div>
         <div class="cs-card"><h3>Case viewer</h3><p>A project image morphs into the case study using the View Transitions API, with a plain fallback in other browsers.</p></div>
         <div class="cs-card"><h3>Bugs found and fixed</h3><p>The "#" links error, the always-white mobile menu, clipped hover effects and the missing stylesheet are all fixed in version 2.</p></div>
       </div>
@@ -187,13 +187,13 @@
       <h2>The result</h2>
       <p>Version 2 is live. It keeps all of my content, but it is easier to move around, works on every screen size, and gives each project a place to tell its story.</p>
       <div class="metrics">
-        <div class="metric" data-value="10" data-suffix=""><strong>10</strong><span>Projects presented</span></div>
+        <div class="metric" data-value="6" data-suffix=""><strong>6</strong><span>Projects presented</span></div>
         <div class="metric" data-value="12" data-suffix=""><strong>12</strong><span>Skills you can tap to filter</span></div>
         <div class="metric" data-value="2" data-suffix=""><strong>2</strong><span>Themes from one set of tokens</span></div>
         <div class="metric" data-value="0" data-suffix=""><strong>0</strong><span>Frameworks or libraries</span></div>
       </div>
       <ul class="bullets">
-        <li>Wireframing first would have caught the three-carousel problem and the menu problem before any code existed. Next time the design comes before the build.</li>
+        <li>Wireframing first would have caught the scrolling-categories problem and the menu problem before any code existed. Next time the design comes before the build.</li>
         <li>Small details carry the experience: tap-target size, focus rings, and a menu that respects the theme.</li>
         <li>Progressive enhancement keeps fancy features from becoming failure points. The lens, the viewer and the filter are extras, and the site works without them.</li>
         <li>Next: give every project its own case study, measure speed, accessibility and SEO with Lighthouse, and generate one static page per case study so search engines can read each one.</li>
@@ -208,7 +208,7 @@
 
     <nav class="pager" aria-label="More projects">
       <span></span>
-      <a class="next" href="seo-report.html"><small>Next →</small>SEO Report</a>
+      <a class="next" href="terracotta-table.html"><small>Next →</small>Terracotta Table</a>
     </nav>
   </main>
 

@@ -168,3 +168,8 @@ footer { padding: 2rem 0 4rem; text-align: center; color: var(--subtle); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* ---------- Theme-aware images: a light and a dark file per image ---------- */
+.img-dark { display: none; }
+:root:not(.light) .img-light { display: none; }
+:root:not(.light) .img-dark { display: block; }

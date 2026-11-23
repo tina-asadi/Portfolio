@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products — Watch</title>
+    <meta name="description" content="Browse smart watches, outdoor watches and sport bands." />
+    <meta name="theme-color" content="#000000" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main id="main">
+      <section class="section page-hero">
+        <div class="container">
+          <div class="section-head">
+            <h1 class="section-title">Our Products</h1>
+            <p class="section-subtitle">Different models, bands and cases</p>
+          </div>
+
+          <div class="toolbar">
+            <div class="filters" role="group" aria-label="Filter by category">
+              <button class="chip" data-filter="all">All</button>
+              <button class="chip" data-filter="smartwatch">Smart Watches</button>
+              <button class="chip" data-filter="outdoor">Outdoor</button>
+              <button class="chip" data-filter="band">Bands</button>
+              <button class="chip" data-filter="wishlist">♥ Wishlist <span data-chip-wish></span></button>
+            </div>
+            <div class="toolbar__right">
+              <div class="field-inline">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+                <label for="catalogue-search" class="visually-hidden">Search products</label>
+                <input id="catalogue-search" type="search" placeholder="Search products…" />
+              </div>
+              <div class="field-inline">
+                <label for="catalogue-sort" class="visually-hidden">Sort by</label>
+                <select id="catalogue-sort">
+                  <option value="featured">Sort: Featured</option>
+                  <option value="price-asc">Price: Low to high</option>
+                  <option value="price-desc">Price: High to low</option>
+                  <option value="name">Name: A–Z</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <p class="catalogue-count" id="catalogue-count" aria-live="polite"></p>
+          <div class="product-grid" id="catalogue"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

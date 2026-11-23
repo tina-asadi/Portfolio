@@ -1,17 +1,18 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terracotta Table | Case study | Tina Asadi</title>
-  <meta name="description" content="A restaurant website with a menu and a visual table-booking flow, designed and built as the guest-facing front end for the TableEase reservation system.">
+  <meta name="description" content="A restaurant website with two sides: guests pick a table on a floor plan, and staff run the room from a live dashboard. Built as the front end for TableEase.">
   <link rel="canonical" href="https://tina-asadi.github.io/Portfolio/projects/terracotta-table.html">
   <meta name="theme-color" content="#0b0c0f">
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="Terracotta Table | Case study | Tina Asadi">
-  <meta property="og:description" content="A restaurant website with a menu and a visual table-booking flow, designed and built as the guest-facing front end for the TableEase reservation system.">
+  <meta property="og:description" content="A restaurant website with two sides: guests pick a table on a floor plan, and staff run the room from a live dashboard. Built as the front end for TableEase.">
   <meta property="og:url" content="https://tina-asadi.github.io/Portfolio/projects/terracotta-table.html">
-  <meta property="og:image" content="https://tina-asadi.github.io/Portfolio/images/terracotta-table/cover.jpg">
+  <meta property="og:image" content="https://tina-asadi.github.io/Portfolio/images/terracotta-table/home-light.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <script type="application/ld+json">
@@ -19,8 +20,8 @@
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": "Terracotta Table",
-      "description": "A restaurant website with a menu and a visual table-booking flow, designed and built as the guest-facing front end for the TableEase reservation system.",
-      "image": "https://tina-asadi.github.io/Portfolio/images/terracotta-table/cover.jpg",
+      "description": "A restaurant website with two sides: guests pick a table on a floor plan, and staff run the room from a live dashboard. Built as the front end for TableEase.",
+      "image": "https://tina-asadi.github.io/Portfolio/images/terracotta-table/home-light.jpg",
       "url": "https://tina-asadi.github.io/Portfolio/projects/terracotta-table.html",
       "author": {
           "@type": "Person",
@@ -66,21 +67,23 @@
     <div class="cs-intro">
       <span class="tag">Case study</span>
       <h1>Terracotta Table</h1>
-      <p class="lead">A restaurant website where guests see the menu, pick a day and time, and choose their own table on a floor plan, built as the guest-facing front end for TableEase.</p>
+      <p class="lead">A restaurant website with two sides: guests choose their own table on a floor plan, and staff run the room from a live dashboard. Built as the front end for TableEase, a reservation system.</p>
       <dl class="cs-facts">
-        <div><dt>Role</dt><dd>UI design and front-end development</dd></div>
+        <div><dt>Role</dt><dd>UI designer and front-end developer</dd></div>
         <div><dt>Type</dt><dd>Concept project for TableEase</dd></div>
         <div><dt>Tools</dt><dd>HTML, CSS, JavaScript</dd></div>
-        <div><dt>Focus</dt><dd>Reservations, menu, accessibility</dd></div>
+        <div><dt>Focus</dt><dd>Booking flow, staff tools, accessibility</dd></div>
       </dl>
-      <div class="cs-cover cs-cover--16x10"><img class="img-light" src="../images/terracotta-table/home-light.jpg" alt="Terracotta Table home page with a charred octopus dish in a rotating carousel of chef’s picks" width="1440" height="900" fetchpriority="high" decoding="async"><img class="img-dark" src="../images/terracotta-table/home-dark.jpg" alt="Terracotta Table home page with a charred octopus dish in a rotating carousel of chef’s picks" width="1440" height="900" fetchpriority="high" decoding="async"></div>
+      <div class="cs-cover cs-cover--16x10"><img class="img-light" src="../images/terracotta-table/home-light.jpg" alt="Terracotta Table home page with a carousel of the chef’s picks" width="1440" height="900" fetchpriority="high" decoding="async"><img class="img-dark" src="../images/terracotta-table/home-dark.jpg" alt="Terracotta Table home page with a carousel of the chef’s picks" width="1440" height="900" fetchpriority="high" decoding="async"></div>
     </div>
 
     <div class="cs-layout">
       <nav class="rail" aria-label="Chapters">
         <a href="#plan">The plan</a>
         <a href="#idea">The idea</a>
-        <a href="#design">Design</a>
+        <a href="#low-fidelity">Low fidelity</a>
+        <a href="#high-fidelity">Low to high fidelity</a>
+        <a href="#build">Building it</a>
         <a href="#prototype">The prototype</a>
         <a href="#result">The result</a>
       </nav>
@@ -89,110 +92,159 @@
     <article class="ch reveal" id="plan">
       <p class="ch-num" aria-hidden="true">01</p>
       <h2>The plan</h2>
-      <p>TableEase is a reservation system for restaurants. It needed a believable restaurant to run on, so I designed Terracotta Table: a neighbourhood restaurant cooking over an open oak fire, with a website whose main job is to get a guest from “I’m hungry” to “my table is booked”.</p>
+      <p>TableEase is a reservation system for restaurants, and a system needs a restaurant to run on. Terracotta Table is that restaurant: a neighbourhood place cooking over an open oak fire, with a website whose main job is to get a guest from “I am hungry” to “my table is booked”.</p>
+      <p>Booking is only half of the story. Somebody has to run the evening, so the same site also needed a side for staff. The screens follow the use cases written for TableEase: signing up, booking, managing tables and opening hours, and keeping customer details up to date.</p>
       <ul class="bullets">
         <li>Show the food first, because the menu is what makes people want to book.</li>
         <li>Let a guest book without calling: party size, day, time and a table, in a few taps.</li>
-        <li>Show availability honestly, including when a time is full and a waitlist is the only option.</li>
-        <li>Give guests and restaurant staff their own sign-in on the same site.</li>
+        <li>Be honest about availability, including when a time is full and a waitlist is the only option.</li>
+        <li>Give staff a live view of the floor, the bookings and the customers, on the same site.</li>
+        <li>Work in a light and a dark theme, on desktop and on a phone.</li>
       </ul>
       <ol class="steps">
-        <li class="step"><b>1. Map the guest journey</b><span>Home, menu, then reserve, with About and Contact for trust and practical details.</span></li>
-        <li class="step"><b>2. Sketch the booking flow</b><span>Decide what a guest must choose, and in which order: guests, day, time, table.</span></li>
-        <li class="step"><b>3. Wireframe, then style</b><span>Low-fidelity layouts first, then a warm terracotta and cream look with a dark mode.</span></li>
-        <li class="step"><b>4. Build and test the prototype</b><span>Plain HTML, CSS and JavaScript, checked on desktop and phone widths.</span></li>
+        <li class="step"><b>1. Brief</b><span>Write down who books, who serves and what each of them needs</span></li>
+        <li class="step"><b>2. Define</b><span>Order the booking choices: guests, day, time, table, details</span></li>
+        <li class="step"><b>3. Wireframe</b><span>Sketch every screen with structure only</span></li>
+        <li class="step"><b>4. Design</b><span>Warm terracotta and cream, with a dark theme</span></li>
+        <li class="step"><b>5. Build</b><span>Plain HTML, CSS and JavaScript</span></li>
+        <li class="step"><b>6. Test</b><span>Desktop and phone widths, both themes, keyboard use</span></li>
       </ol>
-
     </article>
 
     <article class="ch reveal" id="idea">
       <p class="ch-num" aria-hidden="true">02</p>
       <h2>The idea</h2>
-      <p>Most booking forms ask for a date, a time and a number, then hope for the best. I wanted the guest to see the room. The idea was to turn the reservation into a small visual game: slide to a time, tap a table, done.</p>
+      <p>Most booking forms ask for a date, a time and a number, then hope for the best. I wanted the guest to see the room. The idea was to turn the reservation into a small visual choice: slide to a time, tap a table, done. Staff get the same room from the other side.</p>
       <div class="cards">
-        <div class="cs-card"><h3>Dish-first home page</h3><p>A carousel of chef’s picks, with previous, next and pause controls, so the page is lively but never out of the guest’s control.</p></div>
-        <div class="cs-card"><h3>A menu that is easy to scan</h3><p>Four sections, prices on the right, a “Most popular” label, and badges for vegetarian, vegan, gluten-free and nuts.</p></div>
-        <div class="cs-card"><h3>Pick a time with a slider</h3><p>Each half-hour slot shows how many tables are free. Full slots are hatched and offer a waitlist instead of a dead end.</p></div>
-        <div class="cs-card"><h3>Choose a table on a floor plan</h3><p>Window, main hall and patio. Tables that are too small or booked are dimmed, and the best match is highlighted for the guest’s seating wish.</p></div>
-        <div class="cs-card"><h3>Seating wishes</h3><p>Window, quiet corner, patio, accessible and booth. Accessibility is a booking option, not an afterthought.</p></div>
-        <div class="cs-card"><h3>Guest and staff sign-in</h3><p>Demo accounts are one click away, mirroring the accounts of the TableEase Django backend.</p></div>
+        <div class="cs-card"><h3>Dish-first home page</h3><p>A carousel of the chef’s picks with previous, next and pause controls, so the page feels alive but never out of the guest’s control.</p></div>
+        <div class="cs-card"><h3>A menu you can browse</h3><p>A coverflow carousel of dishes, then the full menu in sections with prices, a “Most popular” label and dietary badges.</p></div>
+        <div class="cs-card"><h3>Pick a time with a slider</h3><p>Every half-hour slot shows how many tables are free. Full slots offer a waitlist instead of a dead end.</p></div>
+        <div class="cs-card"><h3>Choose a table on a floor plan</h3><p>Window, main hall and patio, drawn with chairs. Tables that are too small or taken are dimmed, and the best match for the guest’s seating wish is highlighted.</p></div>
+        <div class="cs-card"><h3>A guest account</h3><p>Sign up, see My bookings, change or cancel a booking, and reset a forgotten password.</p></div>
+        <div class="cs-card"><h3>A dashboard for staff</h3><p>Live floor, reservations, customers, tables, opening hours and insights, with the evening’s arrivals and waitlist at a glance.</p></div>
       </div>
-
     </article>
 
-    <article class="ch reveal" id="design">
+    <article class="ch reveal" id="low-fidelity">
       <p class="ch-num" aria-hidden="true">03</p>
-      <h2>Design</h2>
-      <p>I started with grey wireframes so the layout and the order of choices could be judged without colour or photos getting in the way. Drag the handle to see the same screen as wireframe and as finished design.</p>
-      <div class="compare compare--16x10">
-        <img class="img-light" src="../images/terracotta-table/home-light.jpg" alt="High fidelity Terracotta Table home page" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/home-dark.jpg" alt="High fidelity Terracotta Table home page" width="1440" height="900" loading="lazy" decoding="async">
-        <div class="compare-top"><img class="img-light" src="../images/terracotta-table/home-lo-light.jpg" alt="Low fidelity wireframe of the Terracotta Table home page" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/home-lo-dark.jpg" alt="Low fidelity wireframe of the Terracotta Table home page" width="1440" height="900" loading="lazy" decoding="async"></div>
-        <span class="compare-label is-left">Wireframe</span>
-        <span class="compare-label is-right">Final design</span>
-        <div class="compare-line"></div>
-        <input type="range" min="0" max="100" value="50" aria-label="Reveal the final design over the wireframe">
-      </div>
-      <p class="hint">Drag the handle, or use the arrow keys.</p>
-      <h3 class="sub">The booking screen</h3>
-      <div class="compare compare--4x3">
-        <img class="img-light" src="../images/terracotta-table/reserve-light.jpg" alt="High fidelity booking screen with a floor plan" width="1440" height="1080" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/reserve-dark.jpg" alt="High fidelity booking screen with a floor plan" width="1440" height="1080" loading="lazy" decoding="async">
-        <div class="compare-top"><img class="img-light" src="../images/terracotta-table/reserve-lo-light.jpg" alt="Low fidelity wireframe of the booking screen" width="1440" height="1080" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/reserve-lo-dark.jpg" alt="Low fidelity wireframe of the booking screen" width="1440" height="1080" loading="lazy" decoding="async"></div>
-        <span class="compare-label is-left">Wireframe</span>
-        <span class="compare-label is-right">Final design</span>
-        <div class="compare-line"></div>
-        <input type="range" min="0" max="100" value="50" aria-label="Reveal the final design over the wireframe">
-      </div>
-      <p class="hint">Drag the handle, or use the arrow keys.</p>
-      <h3 class="sub">Every page</h3>
+      <h2>Low fidelity</h2>
+      <p>I judged every screen in grayscale first. With no colour, photos or type styling to hide behind, the only questions left are structural: what comes first, what a guest has to decide and in which order, and where staff look to find out who is arriving next.</p>
+      <p>The booking screen is a single column of choices that ends in a floor plan, and the staff dashboard is a row of numbers above a set of tabs. The wireframes below show each screen stripped back to those decisions.</p>
       <div class="gallery">
-        <figure class="gallery-item" tabindex="0" role="region" aria-label="Full menu page with four sections and dietary badges"><img class="img-light" src="../images/terracotta-table/menu-light.jpg" alt="Full menu page with four sections and dietary badges" width="1440" height="2767" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/menu-dark.jpg" alt="Full menu page with four sections and dietary badges" width="1440" height="2767" loading="lazy" decoding="async"></figure>
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Wireframe of the home page"><img class="img-light" src="../images/terracotta-table/home-lo-light.jpg" alt="Wireframe of the home page" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/home-lo-dark.jpg" alt="Wireframe of the home page" width="1440" height="900" loading="lazy" decoding="async"></figure>
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Wireframe of the booking screen with a floor plan"><img class="img-light" src="../images/terracotta-table/reserve-lo-light.jpg" alt="Wireframe of the booking screen with a floor plan" width="1440" height="1080" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/reserve-lo-dark.jpg" alt="Wireframe of the booking screen with a floor plan" width="1440" height="1080" loading="lazy" decoding="async"></figure>
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Wireframe of the menu page"><img class="img-light" src="../images/terracotta-table/menu-lo-light.jpg" alt="Wireframe of the menu page" width="1440" height="1080" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/menu-lo-dark.jpg" alt="Wireframe of the menu page" width="1440" height="1080" loading="lazy" decoding="async"></figure>
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Wireframe of the staff live floor"><img class="img-light" src="../images/terracotta-table/staff-floor-lo-light.jpg" alt="Wireframe of the staff live floor" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/staff-floor-lo-dark.jpg" alt="Wireframe of the staff live floor" width="1440" height="900" loading="lazy" decoding="async"></figure>
+      </div>
+    </article>
+
+    <article class="ch reveal" id="high-fidelity">
+      <p class="ch-num" aria-hidden="true">04</p>
+      <h2>Low to high fidelity</h2>
+      <p>High fidelity turned structure into atmosphere. I picked a warm terracotta accent on cream, with dark brown text, and built a dark theme from the same set of colour variables, so a guest booking at night is not met by a glaring page. Your choice is remembered.</p>
+      <p>Drag each slider to compare the wireframe with the finished screen. The layout barely moved, which was the point: the wireframe made the structural decisions, and fidelity only added polish.</p>
+      <div class="compare compare--16x10">
+        <img class="img-light" src="../images/terracotta-table/home-light.jpg" alt="Final home page" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/home-dark.jpg" alt="Final home page" width="1440" height="900" loading="lazy" decoding="async">
+        <div class="compare-top"><img class="img-light" src="../images/terracotta-table/home-lo-light.jpg" alt="Wireframe of the home page" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/home-lo-dark.jpg" alt="Wireframe of the home page" width="1440" height="900" loading="lazy" decoding="async"></div>
+        <span class="compare-label is-left">Wireframe</span>
+        <span class="compare-label is-right">Final design</span>
+        <div class="compare-line"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Reveal the final design over the wireframe">
+      </div>
+      <p class="hint">Drag the handle, or use the arrow keys.</p>
+      <div class="compare compare--4x3">
+        <img class="img-light" src="../images/terracotta-table/reserve-light.jpg" alt="Final booking screen with a floor plan" width="1440" height="1080" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/reserve-dark.jpg" alt="Final booking screen with a floor plan" width="1440" height="1080" loading="lazy" decoding="async">
+        <div class="compare-top"><img class="img-light" src="../images/terracotta-table/reserve-lo-light.jpg" alt="Wireframe of the booking screen" width="1440" height="1080" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/reserve-lo-dark.jpg" alt="Wireframe of the booking screen" width="1440" height="1080" loading="lazy" decoding="async"></div>
+        <span class="compare-label is-left">Wireframe</span>
+        <span class="compare-label is-right">Final design</span>
+        <div class="compare-line"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Reveal the final design over the wireframe">
+      </div>
+      <p class="hint">Drag the handle, or use the arrow keys.</p>
+      <div class="compare compare--16x10">
+        <img class="img-light" src="../images/terracotta-table/staff-floor-light.jpg" alt="Final staff live floor" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/staff-floor-dark.jpg" alt="Final staff live floor" width="1440" height="900" loading="lazy" decoding="async">
+        <div class="compare-top"><img class="img-light" src="../images/terracotta-table/staff-floor-lo-light.jpg" alt="Wireframe of the staff live floor" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/staff-floor-lo-dark.jpg" alt="Wireframe of the staff live floor" width="1440" height="900" loading="lazy" decoding="async"></div>
+        <span class="compare-label is-left">Wireframe</span>
+        <span class="compare-label is-right">Final design</span>
+        <div class="compare-line"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Reveal the final design over the wireframe">
+      </div>
+      <p class="hint">Drag the handle, or use the arrow keys.</p>
+      <h3 class="sub">Guest pages</h3>
+      <div class="gallery">
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Full menu page with sections and dietary badges"><img class="img-light" src="../images/terracotta-table/menu-light.jpg" alt="Full menu page with sections and dietary badges" width="1440" height="2767" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/menu-dark.jpg" alt="Full menu page with sections and dietary badges" width="1440" height="2767" loading="lazy" decoding="async"></figure>
         <figure class="gallery-item" tabindex="0" role="region" aria-label="About page telling the story of the restaurant"><img class="img-light" src="../images/terracotta-table/about-light.jpg" alt="About page telling the story of the restaurant" width="1440" height="1860" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/about-dark.jpg" alt="About page telling the story of the restaurant" width="1440" height="1860" loading="lazy" decoding="async"></figure>
         <figure class="gallery-item" tabindex="0" role="region" aria-label="Contact page with address, opening hours and phone"><img class="img-light" src="../images/terracotta-table/contact-light.jpg" alt="Contact page with address, opening hours and phone" width="1440" height="1309" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/contact-dark.jpg" alt="Contact page with address, opening hours and phone" width="1440" height="1309" loading="lazy" decoding="async"></figure>
         <figure class="gallery-item" tabindex="0" role="region" aria-label="Sign-in page with one-click demo accounts for staff and guests"><img class="img-light" src="../images/terracotta-table/signin-light.jpg" alt="Sign-in page with one-click demo accounts for staff and guests" width="1440" height="1239" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/signin-dark.jpg" alt="Sign-in page with one-click demo accounts for staff and guests" width="1440" height="1239" loading="lazy" decoding="async"></figure>
       </div>
+      <h3 class="sub">Staff pages</h3>
+      <div class="gallery">
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Staff reservations list"><img class="img-light" src="../images/terracotta-table/staff-reservations-light.jpg" alt="Staff reservations list" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/staff-reservations-dark.jpg" alt="Staff reservations list" width="1440" height="900" loading="lazy" decoding="async"></figure>
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Staff customer list"><img class="img-light" src="../images/terracotta-table/staff-customers-light.jpg" alt="Staff customer list" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/staff-customers-dark.jpg" alt="Staff customer list" width="1440" height="900" loading="lazy" decoding="async"></figure>
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Staff table management"><img class="img-light" src="../images/terracotta-table/staff-tables-light.jpg" alt="Staff table management" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/staff-tables-dark.jpg" alt="Staff table management" width="1440" height="900" loading="lazy" decoding="async"></figure>
+        <figure class="gallery-item" tabindex="0" role="region" aria-label="Staff insights: busiest times and bookings by day"><img class="img-light" src="../images/terracotta-table/staff-insights-light.jpg" alt="Staff insights: busiest times and bookings by day" width="1440" height="900" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/staff-insights-dark.jpg" alt="Staff insights: busiest times and bookings by day" width="1440" height="900" loading="lazy" decoding="async"></figure>
+      </div>
+      <h3 class="sub">On a phone</h3>
       <div class="gallery phones">
         <figure class="gallery-item phone" tabindex="0" role="region" aria-label="Phone layout of the home page"><img class="img-light" src="../images/terracotta-table/home-m-light.jpg" alt="Phone layout of the home page" width="390" height="844" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/home-m-dark.jpg" alt="Phone layout of the home page" width="390" height="844" loading="lazy" decoding="async"></figure>
         <figure class="gallery-item phone" tabindex="0" role="region" aria-label="Phone layout of the booking screen"><img class="img-light" src="../images/terracotta-table/reserve-m-light.jpg" alt="Phone layout of the booking screen" width="390" height="2194" loading="lazy" decoding="async"><img class="img-dark" src="../images/terracotta-table/reserve-m-dark.jpg" alt="Phone layout of the booking screen" width="390" height="2194" loading="lazy" decoding="async"></figure>
       </div>
+    </article>
 
+    <article class="ch reveal" id="build">
+      <p class="ch-num" aria-hidden="true">05</p>
+      <h2>Building it</h2>
+      <p>The site is one self-contained page of plain HTML, CSS and JavaScript, with no framework. These are the parts I am proudest of.</p>
+      <div class="cards">
+        <div class="cs-card"><h3>A believable room</h3><p>Each day has seeded bookings and one party already on a waitlist, so the floor, the arrivals list and the insights all have something real to show.</p></div>
+        <div class="cs-card"><h3>Matching tables to guests</h3><p>A booking is matched to tables by party size and seating wish, and the reason a table is dimmed or recommended is explained in words.</p></div>
+        <div class="cs-card"><h3>A floor plan drawn in SVG</h3><p>Tables and chairs are drawn in code, so they scale cleanly and respond to hover, focus and selection.</p></div>
+        <div class="cs-card"><h3>Two roles, one site</h3><p>Staff and guests see different screens. Locked views explain why, instead of simply hiding things.</p></div>
+        <div class="cs-card"><h3>Themes from one set of tokens</h3><p>Colours and shadows are CSS variables. The dark theme swaps them, and the saved choice is applied before the first paint.</p></div>
+        <div class="cs-card"><h3>Accessible by default</h3><p>Real buttons and labels, visible focus rings, live announcements, and reduced-motion support.</p></div>
+        <div class="cs-card"><h3>Sample details</h3><p>The address, phone number and email on the Contact page are samples for the prototype.</p></div>
+      </div>
     </article>
 
     <article class="ch reveal" id="prototype">
-      <p class="ch-num" aria-hidden="true">04</p>
+      <p class="ch-num" aria-hidden="true">06</p>
       <h2>The prototype</h2>
-      <p>The prototype is a working website, not a picture of one. Choose a party size, change the day, slide through the times and tap a table to see the booking panel update. Switch to dark mode, or sign in with a demo account.</p>
-      <div class="cta">
-        <a class="btn-primary" href="https://claude.ai/artifact/Wq15rGMRYWFaNtT22Uf91a" target="_blank" rel="noopener">Open the prototype</a>
+      <p>The working site is the prototype. Launch it below, choose a party size, slide through the times and tap a table. Then use the Sign in page to open the staff dashboard or a guest account with one click.</p>
+      <div class="prototype" data-embed="../demos/terracotta-table/index.html" data-title="Terracotta Table prototype">
+        <div class="prototype-intro">
+          <p>This is the real, working site.</p>
+          <div class="cta"><button type="button" class="btn-primary" data-launch>Launch the live site</button><a class="btn-ghost" href="../demos/terracotta-table/index.html" target="_blank" rel="noopener">Open in a new tab</a></div>
+        </div>
       </div>
-
     </article>
 
     <article class="ch reveal" id="result">
-      <p class="ch-num" aria-hidden="true">05</p>
+      <p class="ch-num" aria-hidden="true">07</p>
       <h2>The result</h2>
-      <p>Terracotta Table is a complete, working front end for a restaurant, ready to be connected to the TableEase backend. The address, phone number and email on the Contact page are samples for the prototype.</p>
+      <p>Terracotta Table is a complete front end for a restaurant: a guest can find a dish, choose a table and book, and staff can see and manage the evening. It is ready to be connected to the TableEase backend.</p>
       <div class="metrics">
         <div class="metric" data-value="12" data-suffix=""><strong>12</strong><span>Tables on the floor plan</span></div>
-        <div class="metric" data-value="18" data-suffix=""><strong>18</strong><span>Dishes across four menu sections</span></div>
-        <div class="metric" data-value="7" data-suffix=""><strong>7</strong><span>Days to book ahead</span></div>
-        <div class="metric" data-value="5" data-suffix=""><strong>5</strong><span>Seating wishes, including accessible</span></div>
+        <div class="metric" data-value="6" data-suffix=""><strong>6</strong><span>Staff views</span></div>
+        <div class="metric" data-value="18" data-suffix=""><strong>18</strong><span>Dishes on the menu</span></div>
+        <div class="metric" data-value="2" data-suffix=""><strong>2</strong><span>Themes from one set of tokens</span></div>
       </div>
       <ul class="bullets">
         <li>Showing availability as a count and a colour, right on the time slider, means a guest never has to guess whether a time will work.</li>
-        <li>Putting accessibility in the booking flow itself turns it into a feature guests can choose.</li>
+        <li>Making accessibility a seating option inside the booking flow turns it into something guests can simply choose.</li>
+        <li>Designing the staff side at the same time as the guest side kept the two consistent, because both read from the same bookings.</li>
         <li>Next: connect the booking panel to the live TableEase API and add email confirmations.</li>
       </ul>
       <div class="cta">
-        <a class="btn-primary" href="https://claude.ai/artifact/Wq15rGMRYWFaNtT22Uf91a" target="_blank" rel="noopener">Open the prototype</a>
+        <a class="btn-primary" href="../demos/terracotta-table/index.html" target="_blank" rel="noopener">View the live site</a>
+        <a class="btn-ghost" href="https://github.com/tina-asadi/Portfolio/tree/main/demos/terracotta-table" target="_blank" rel="noopener">View the code</a>
       </div>
-
     </article>
 
       </div>
     </div>
 
     <nav class="pager" aria-label="More projects">
-      <a href="seo-report.html"><small>← Previous</small>SEO Report</a>
+      <a href="portfolio-website.html"><small>← Previous</small>Portfolio Website</a>
       <a class="next" href="golnar-persian-carpets.html"><small>Next →</small>Golnar Persian Carpets</a>
     </nav>
   </main>

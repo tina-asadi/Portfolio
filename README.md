@@ -11,13 +11,14 @@ css/
 js/
   theme-init.js            runs in <head>: saved theme, no flash
   site.js                  shared: theme toggle, footer year, mobile menu
-  home.js                  home page: carousels, skill filter, viewer, blueprint lens
+  home.js                  home page: skill filter, viewer, blueprint lens
   case-study.js            project pages: reveal, rail, slider, count-up, prototype
   xray.js                  SEO X-ray (all pages)
 projects/
   _template.html           copy this for each new project
   portfolio-website.html
-  seo-report.html
+  terracotta-table.html, golnar-persian-carpets.html, watch-store.html
+demos/                     working sites embedded in the prototype chapters
 images/  files/            assets (one folder per project inside images/)
 ```
 

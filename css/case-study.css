@@ -177,10 +177,6 @@
 /* Small heading between blocks inside a chapter */
 .ch h3.sub { margin: 2.2rem 0 .8rem; font-size: 1.15rem; }
 
-/* ---------- Theme-aware screenshots: a light and a dark file per image ---------- */
-.img-dark { display: none; }
-:root:not(.light) .img-light { display: none; }
-:root:not(.light) .img-dark { display: block; }
 
 /* Galleries show every image in full (no inner scrolling or cropping) */
 .gallery-item { max-height: none; overflow: visible; }

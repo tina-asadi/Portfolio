@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Golnar Persian Carpets</title>
+    <meta
+      name="description"
+      content="Golnar: a luxury concept store for hand-knotted Persian carpets. Designed and built by Tina Asadi."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Italiana&family=Noto+Nastaliq+Urdu:wght@400;600&family=Vazirmatn:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/theme.js"></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/carpet.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap bar">
+        <a class="brand" href="#top" aria-label="Golnar, home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+            <rect x="5" y="5" width="14" height="14" />
+            <rect x="5" y="5" width="14" height="14" transform="rotate(45 12 12)" />
+            <circle cx="12" cy="12" r="2.2" />
+          </svg>
+          <span class="wm">GOLNAR</span><span class="wm-fa" lang="fa">گلنار</span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <a href="#collection">Collection</a>
+          <a href="#anatomy">Read a carpet</a>
+          <a href="#making">The making</a>
+          <a href="#visit">Private viewing</a>
+        </nav>
+        <button class="bagbtn" id="bagBtn" aria-label="Open bag">
+          Bag <span class="n" id="bagCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero wrap" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Hand-knotted in Iran · Shown by appointment</p>
+          <h1>Every knot,<span>tied by hand.</span></h1>
+          <p class="lede">
+            Golnar brings finished carpets directly from master weavers in eight Persian cities. Each piece
+            arrives with its city, its knot count and the months it spent on the loom.
+          </p>
+          <div class="ctas">
+            <a class="btn primary" href="#collection">View the collection</a>
+            <a class="btn ghost" href="#visit">Book a private viewing</a>
+          </div>
+          <dl class="facts">
+            <div>
+              <dt>8</dt>
+              <dd>Weaving cities</dd>
+            </div>
+            <div>
+              <dt>100%</dt>
+              <dd>Natural dyes</dd>
+            </div>
+            <div>
+              <dt>1 of 1</dt>
+              <dd>Every piece</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="hero-art">
+          <div class="arch" aria-hidden="true"></div>
+          <div class="fa-bg" aria-hidden="true" lang="fa">فرش</div>
+          <figure class="hero-rug">
+            <div class="rug" id="heroRug"></div>
+            <figcaption class="spec" id="heroSpec"></figcaption>
+          </figure>
+          <p class="hint">Move across the carpet to see each knot</p>
+        </div>
+      </section>
+
+      <section class="cities" aria-label="Weaving cities">
+        <div class="wrap">
+          <p class="eyebrow">Shop by weaving city</p>
+          <div class="city-row" id="cityRow"></div>
+        </div>
+      </section>
+
+      <section class="wrap section" id="collection">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">Current pieces</p>
+            <h2>The collection</h2>
+          </div>
+          <p class="note" id="countNote"></p>
+        </div>
+        <div class="filters">
+          <div class="chips" id="cityChips" aria-label="Filter by city"></div>
+          <span class="sep" aria-hidden="true"></span>
+          <div class="chips" id="sizeChips" aria-label="Filter by size"></div>
+        </div>
+        <div class="grid" id="grid"></div>
+      </section>
+
+      <section class="band" id="anatomy">
+        <div class="wrap anat">
+          <div class="anat-rug"><div class="rug" id="anatRug"></div></div>
+          <div class="anat-copy">
+            <p class="eyebrow">A short guide</p>
+            <h2>How to read a Persian carpet</h2>
+            <p>
+              Most city carpets share the same architecture. Once you know the parts and their Persian names,
+              you can describe any piece you see in a showroom.
+            </p>
+            <ul class="parts" id="parts"></ul>
+            <div class="part-desc" id="partDesc" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap section" id="making">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">The process</p>
+            <h2>From fleece to floor</h2>
+          </div>
+          <p class="note">
+            A room-size city carpet takes months to finish. These are the stages every Golnar piece passes
+            through, in order.
+          </p>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="num">1</span>
+            <h3>Spinning</h3>
+            <span class="fa" lang="fa">ریسندگی</span>
+            <p>
+              Fleece from Kork and highland sheep is washed and spun by hand. Small changes in thickness give
+              the pile its soft, living sheen.
+            </p>
+          </li>
+          <li class="step">
+            <span class="num">2</span>
+            <h3>Dyeing</h3>
+            <span class="fa" lang="fa">رنگرزی</span>
+            <p>
+              Yarn is dyed in small batches with roots, rinds and leaves. Each batch differs slightly, and the
+              faint bands this leaves are called abrash.
+            </p>
+          </li>
+          <li class="step">
+            <span class="num">3</span>
+            <h3>Knotting</h3>
+            <span class="fa" lang="fa">بافت</span>
+            <p>
+              Each knot is tied around two warp threads and cut with a hook knife. Most workshops tie the
+              asymmetric senneh knot; Tabriz and Heriz often use the symmetric one.
+            </p>
+          </li>
+          <li class="step">
+            <span class="num">4</span>
+            <h3>Washing</h3>
+            <span class="fa" lang="fa">شستشو</span>
+            <p>The finished carpet is washed and laid flat in the sun so the pile and the dyes settle.</p>
+          </li>
+          <li class="step">
+            <span class="num">5</span>
+            <h3>Clipping</h3>
+            <span class="fa" lang="fa">پرداخت</span>
+            <p>
+              The pile is sheared to an even height. Fine city carpets are clipped short to keep the drawing
+              crisp.
+            </p>
+          </li>
+        </ol>
+        <div class="dyes">
+          <p class="eyebrow">The dye garden</p>
+          <div class="dye-row">
+            <div class="dye">
+              <span class="sw sw--madder"></span>
+              <div>
+                <b>Madder root <span class="fa" lang="fa">روناس</span></b
+                ><span>Reds, from rose to deep crimson</span>
+              </div>
+            </div>
+            <div class="dye">
+              <span class="sw sw--indigo"></span>
+              <div>
+                <b>Indigo <span class="fa" lang="fa">نیل</span></b
+                ><span>Blues, built up in repeated dips</span>
+              </div>
+            </div>
+            <div class="dye">
+              <span class="sw sw--pomegranate"></span>
+              <div>
+                <b>Pomegranate rind <span class="fa" lang="fa">پوست انار</span></b
+                ><span>Golds, and greens over indigo</span>
+              </div>
+            </div>
+            <div class="dye">
+              <span class="sw sw--weld"></span>
+              <div>
+                <b>Weld <span class="fa" lang="fa">اسپرک</span></b
+                ><span>Clear, bright yellows</span>
+              </div>
+            </div>
+            <div class="dye">
+              <span class="sw sw--walnut"></span>
+              <div>
+                <b>Walnut husk <span class="fa" lang="fa">پوست گردو</span></b
+                ><span>Browns and outlines</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="density">
+        <div class="wrap calc">
+          <div>
+            <p class="eyebrow">Knot density</p>
+            <h2>What a raj means</h2>
+            <p class="intro">
+              In Iran, fineness is counted in raj: the number of knots across 7 centimetres of width. Change
+              the numbers to see what they mean for a single carpet.
+            </p>
+            <div class="ctrl">
+              <label for="rajIn">Raj</label
+              ><input type="range" id="rajIn" min="25" max="80" step="5" value="50" /><output
+                id="rajOut"
+                for="rajIn"
+                >50</output
+              >
+            </div>
+            <div class="ctrl">
+              <label for="sizeIn">Size</label
+              ><select id="sizeIn">
+                <option value="140x200">140 × 200 cm</option>
+                <option value="200x300" selected>200 × 300 cm</option>
+                <option value="250x350">250 × 350 cm</option>
+                <option value="300x400">300 × 400 cm</option></select
+              ><span class="val" id="areaOut">6 m²</span>
+            </div>
+            <div class="ctrl">
+              <label for="weavIn">Weavers</label
+              ><input type="range" id="weavIn" min="1" max="4" step="1" value="2" /><output
+                id="weavOut"
+                for="weavIn"
+                >2</output
+              >
+            </div>
+            <div class="results">
+              <div><b id="kpsiOut">329</b><span>Knots per sq. inch</span></div>
+              <div><b id="totOut">3.1M</b><span>Knots in total</span></div>
+              <div><b id="moOut">6</b><span>Months on the loom</span></div>
+            </div>
+            <p class="assume">
+              Assumes a skilled weaver ties about 10,000 knots a day and works 25 days a month. Real figures
+              vary with the design and the workshop.
+            </p>
+          </div>
+          <div class="swatch">
+            <canvas
+              id="swatch"
+              width="640"
+              height="640"
+              role="img"
+              aria-label="One square inch of carpet at the chosen density"
+            ></canvas>
+            <p id="swatchCap">One square inch · 18 knots across</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap section" id="visit">
+        <div class="visit">
+          <div class="copy">
+            <p class="eyebrow">By appointment</p>
+            <h2>See them on the floor</h2>
+            <p>
+              A carpet changes with the light and the angle you stand at. Book an hour in the showroom and we
+              will lay out the pieces you shortlist, or bring a selection to your home.
+            </p>
+            <address>
+              <strong>Golnar Showroom</strong>
+              <span>Yorkville, Toronto</span>
+              <span>Tuesday to Saturday, 11:00 to 18:00</span>
+            </address>
+          </div>
+          <form id="visitForm" novalidate>
+            <div class="field">
+              <label for="vName">Name</label><input id="vName" name="name" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="vEmail">Email</label
+              ><input id="vEmail" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="vDate">Preferred date</label><input id="vDate" name="date" type="date" />
+            </div>
+            <div class="field">
+              <label for="vWhere">Viewing</label
+              ><select id="vWhere" name="where">
+                <option>In the showroom</option>
+                <option>At my home</option>
+                <option>Video call</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="vNote">Pieces or rooms you have in mind</label
+              ><textarea id="vNote" name="note" rows="3"></textarea>
+            </div>
+            <div class="field full"><button class="btn primary" type="submit">Request a viewing</button></div>
+            <p class="form-note" id="formNote" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap foot">
+        <div>
+          <div class="big" lang="fa">گلنار</div>
+          <p>
+            Golnar Persian Carpets · Hand-knotted pieces from Kashan, Tabriz, Isfahan, Nain, Qom, Heriz,
+            Kerman and Bijar.
+          </p>
+        </div>
+        <p>Concept store · Design and development by <a href="../golnar.html" target="_top">Tina Asadi</a></p>
+      </div>
+    </footer>
+
+    <div class="scrim" id="scrim"></div>
+    <aside class="drawer" id="drawer" aria-label="Your bag" aria-hidden="true">
+      <div class="drawer-head">
+        <h2>Your bag</h2>
+        <button class="x" id="bagClose" aria-label="Close bag">✕</button>
+      </div>
+      <ul class="bag-list" id="bagList"></ul>
+      <div class="bag-foot">
+        <div class="row"><span>Subtotal</span><strong id="subtotal">$0</strong></div>
+        <div class="row"><span>White-glove delivery in Canada</span><span>Included</span></div>
+        <button class="btn primary" id="checkout">Reserve pieces</button>
+      </div>
+    </aside>
+    <div
+      class="modal"
+      id="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="mTitle"
+      aria-hidden="true"
+    ></div>
+    <div class="toast" id="toast" role="status"></div>
+  </body>
+</html>
