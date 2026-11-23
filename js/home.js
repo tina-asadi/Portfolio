@@ -119,7 +119,7 @@
       const href = $('a', project)?.getAttribute('href');
       hero.src = img.currentSrc || img.src;
       hero.alt = img.alt;
-      $('#case-title', dlg).textContent = $('h4', project).textContent;
+      $('#case-title', dlg).textContent = $('h3', project).textContent;
       $('.stack', dlg).innerHTML = $('.stack', project)?.innerHTML ?? '';
       $('.case-summary', dlg).textContent = $('p', project)?.textContent ?? '';
 

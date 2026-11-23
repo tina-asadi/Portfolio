@@ -86,7 +86,7 @@ section { padding: clamp(2.5rem, 7vw, 3.5rem) 0; border-top: 1px solid var(--bor
 .project a { display: flex; flex-direction: column; height: 100%; color: inherit; text-decoration: none; }
 .project img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top center; transition: transform .4s ease; }
 .project-body { padding: 1rem; display: grid; gap: .6rem; }
-.project-body h4 { margin: .5rem 0 0; font-size: 1.05rem; }
+.project-body h3 { margin: .5rem 0 0; font-size: 1.05rem; }
 .project-body p { margin: 0; }
 .project:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 15px 35px rgba(0, 0, 0, .35); border-color: var(--brand); }
 .project:hover img { transform: scale(1.05); }

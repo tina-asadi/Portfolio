@@ -106,6 +106,7 @@ header {
   transition: background .25s ease, color .25s ease, transform .25s ease, box-shadow .25s ease;
 }
 .btn-primary { background: var(--brand); color: #fff; font-weight: 600; box-shadow: var(--shadow); }
+:root:not(.light) .btn-primary, :root:not(.light) .btn-primary:hover, :root:not(.light) .skip:focus { color: #0b0c0f; }   /* white on the light blue was 2.5:1; dark text is 8:1 */
 .btn-primary:hover { background: var(--brand-600); color: #fff; text-decoration: none; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0, 0, 0, .35); }
 .btn-ghost { background: transparent; border: 1px solid var(--border); color: var(--text); }
 .btn-ghost:hover { background: var(--card); border-color: var(--brand); color: var(--brand); text-decoration: none; transform: translateY(-2px); }
