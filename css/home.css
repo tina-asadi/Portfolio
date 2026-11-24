@@ -18,6 +18,28 @@
 .hero-card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 1rem; box-shadow: var(--shadow); }
 .hero-card img { border-radius: 14px; }
 
+/* Animated cartoon portrait: gentle float, a pulsing glow and floating code symbols */
+.hero-avatar { position: relative; padding: .75rem; background: #0b0d16; border-color: rgba(106, 166, 255, .35); overflow: hidden; }
+.hero-avatar::before {
+  content: ""; position: absolute; inset: -30%; z-index: 0;
+  background: radial-gradient(circle at 50% 55%, rgba(106, 166, 255, .35), rgba(124, 240, 189, .12) 40%, transparent 65%);
+  animation: avatar-glow 5s ease-in-out infinite;
+}
+.avatar-frame { position: relative; z-index: 1; animation: avatar-float 6s ease-in-out infinite; }
+.avatar-frame img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.float-sym {
+  position: absolute; z-index: 2; font: 700 1.5rem/1 ui-monospace, Menlo, Consolas, monospace;
+  color: #7cf0bd; text-shadow: 0 0 14px rgba(124, 240, 189, .55); pointer-events: none;
+  animation: avatar-sym 6s ease-in-out infinite;
+}
+.float-sym.s1 { top: 8%; left: 6%; color: #6aa6ff; text-shadow: 0 0 14px rgba(106, 166, 255, .6); }
+.float-sym.s2 { top: 14%; right: 7%; animation-delay: -2s; }
+.float-sym.s3 { bottom: 12%; right: 8%; color: #6aa6ff; text-shadow: 0 0 14px rgba(106, 166, 255, .6); animation-delay: -4s; }
+@keyframes avatar-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes avatar-glow { 0%, 100% { opacity: .55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.08); } }
+@keyframes avatar-sym { 0%, 100% { transform: translateY(0) rotate(0); opacity: .75; } 50% { transform: translateY(-12px) rotate(6deg); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .hero-avatar::before, .avatar-frame, .float-sym { animation: none; } }
+
 /* ---------- 6. Sections ---------- */
 section { padding: clamp(2.5rem, 7vw, 3.5rem) 0; border-top: 1px solid var(--border); scroll-margin-top: 80px; }
 .section-title { font-size: clamp(1.35rem, 1rem + 1.5vw, 1.9rem); margin: 0 0 1.5rem; }
