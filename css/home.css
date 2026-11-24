@@ -33,6 +33,9 @@
           mask-image: radial-gradient(closest-side, #000 62%, transparent 100%);
 }
 :root.light .hero-avatar::before { opacity: .6; }
+.avatar-frame .img-dark { display: none; }
+:root:not(.light) .avatar-frame .img-light { display: none; }
+:root:not(.light) .avatar-frame .img-dark { display: block; }
 .float-sym {
   position: absolute; z-index: 2; font: 700 1.5rem/1 ui-monospace, Menlo, Consolas, monospace;
   color: #7cf0bd; text-shadow: 0 0 14px rgba(124, 240, 189, .55); pointer-events: none;
