@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 580" role="img" aria-label="Animated illustration of Tina Asadi, a web developer">
+  <defs>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6aa6ff"/><stop offset="1" stop-color="#7cf0bd"/></linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a2520"/><stop offset="1" stop-color="#1f130f"/></linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3c9a8"/><stop offset="1" stop-color="#e8b894"/></linearGradient>
+  </defs>
+  <style>
+    .float  { animation: float 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .float2 { animation: float 6.5s ease-in-out -2s infinite; transform-box: fill-box; transform-origin: center; }
+    .float3 { animation: float 7s ease-in-out -4s infinite; transform-box: fill-box; transform-origin: center; }
+    .head   { animation: bob 4.5s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+    .tail   { animation: sway 4.5s ease-in-out infinite; transform-box: fill-box; transform-origin: 0 0; }
+    .eye    { animation: blink 5s infinite; transform-box: fill-box; transform-origin: center; }
+    .ring   { animation: spin 24s linear infinite; transform-box: fill-box; transform-origin: center; }
+    .pulse  { animation: pulse 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .smile  { animation: smile 6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-14px) } }
+    @keyframes bob   { 0%,100% { transform: translateY(0) rotate(0) } 50% { transform: translateY(-5px) rotate(1.2deg) } }
+    @keyframes sway  { 0%,100% { transform: rotate(0) } 50% { transform: rotate(5deg) } }
+    @keyframes blink { 0%,92%,100% { transform: scaleY(1) } 95% { transform: scaleY(.08) } }
+    @keyframes spin  { to { transform: rotate(360deg) } }
+    @keyframes pulse { 0%,100% { opacity: .35; transform: scale(1) } 50% { opacity: .7; transform: scale(1.06) } }
+    @keyframes smile { 0%,70%,100% { transform: scale(1) } 80%,90% { transform: scale(1.12, 1.25) } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important } }
+  </style>
+
+  <!-- soft glow and orbit -->
+  <circle class="pulse" cx="260" cy="290" r="205" fill="url(#glow)" opacity=".18"/>
+  <g class="ring"><circle cx="260" cy="290" r="228" fill="none" stroke="url(#glow)" stroke-width="2" stroke-dasharray="3 14" opacity=".7"/></g>
+
+  <!-- floating code symbols -->
+  <text class="float"  x="48"  y="170" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="46" font-weight="700" fill="#6aa6ff">&lt;/&gt;</text>
+  <text class="float2" x="400" y="130" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="52" font-weight="700" fill="#7cf0bd">{ }</text>
+  <text class="float3" x="410" y="430" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="40" font-weight="700" fill="#6aa6ff">#</text>
+  <text class="float2" x="40"  y="420" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="38" font-weight="700" fill="#7cf0bd">;</text>
+
+  <!-- body: black turtleneck -->
+  <path d="M30 580 C30 480 120 446 205 432 L315 432 C400 446 490 480 490 580 Z" fill="#1b1d24"/>
+  <path d="M30 580 C30 480 120 446 205 432" fill="none" stroke="#2f323d" stroke-width="3"/>
+  <path d="M315 432 C400 446 490 480 490 580" fill="none" stroke="#2f323d" stroke-width="3"/>
+  <rect x="222" y="352" width="76" height="96" rx="18" fill="#e0aa86"/>
+  <rect x="200" y="396" width="120" height="58" rx="26" fill="#23252e" stroke="#2f323d" stroke-width="3"/>
+
+  <!-- head group -->
+  <g class="head">
+    <!-- back hair and ponytail -->
+    <ellipse cx="260" cy="250" rx="108" ry="122" fill="url(#hair)"/>
+    <g class="tail"><path d="M338 292 C410 320 420 420 372 482 C366 430 356 380 330 340 Z" fill="url(#hair)"/></g>
+    <!-- face -->
+    <ellipse cx="260" cy="276" rx="88" ry="102" fill="url(#skin)"/>
+    <ellipse cx="173" cy="288" rx="12" ry="18" fill="#e8b894"/>
+    <ellipse cx="347" cy="288" rx="12" ry="18" fill="#e8b894"/>
+    <circle cx="173" cy="306" r="4.5" fill="#f5d68a"/>
+    <!-- front hair with centre part -->
+    <path d="M166 268 C150 150 232 126 260 132 C288 126 370 150 354 268 C346 218 312 184 262 176 C208 184 174 220 166 268 Z" fill="url(#hair)"/>
+    <path d="M260 132 C258 150 256 164 252 178" fill="none" stroke="#14100e" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+    <path d="M190 190 C210 168 236 160 252 160" fill="none" stroke="#6a4a3e" stroke-width="3" stroke-linecap="round" opacity=".45"/>
+    <!-- brows -->
+    <path d="M205 246 C216 237 232 236 244 243" fill="none" stroke="#2a1a16" stroke-width="5" stroke-linecap="round"/>
+    <path d="M276 243 C288 236 304 237 315 246" fill="none" stroke="#2a1a16" stroke-width="5" stroke-linecap="round"/>
+    <!-- eyes -->
+    <g class="eye"><ellipse cx="225" cy="272" rx="14" ry="10" fill="#fff"/><circle cx="226" cy="272" r="7.5" fill="#3a2218"/><circle cx="229" cy="269" r="2.4" fill="#fff"/></g>
+    <g class="eye"><ellipse cx="295" cy="272" rx="14" ry="10" fill="#fff"/><circle cx="296" cy="272" r="7.5" fill="#3a2218"/><circle cx="299" cy="269" r="2.4" fill="#fff"/></g>
+    <path d="M208 266 C216 258 234 258 242 266" fill="none" stroke="#2a1a16" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M278 266 C286 258 304 258 312 266" fill="none" stroke="#2a1a16" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- nose, cheeks, smile -->
+    <path d="M258 284 C254 302 252 312 262 314" fill="none" stroke="#c98f6c" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="205" cy="312" r="15" fill="#ee8a8a" opacity=".28"/>
+    <circle cx="315" cy="312" r="15" fill="#ee8a8a" opacity=".28"/>
+    <g class="smile"><path d="M232 334 C248 352 274 352 290 334" fill="#c4566a" stroke="#b04458" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M240 338 C252 345 270 345 282 338" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".85"/></g>
+  </g>
+</svg>
