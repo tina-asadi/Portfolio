@@ -27,11 +27,12 @@
 }
 .avatar-frame { position: relative; z-index: 1; animation: avatar-float 6s ease-in-out infinite; }
 .avatar-frame img {
-  display: block; width: 100%; height: auto; border-radius: 0;
+  width: 100%; height: auto; border-radius: 0; vertical-align: bottom;
   /* No frame: the edges of the picture fade out softly into the page */
   -webkit-mask-image: radial-gradient(closest-side, #000 62%, transparent 100%);
           mask-image: radial-gradient(closest-side, #000 62%, transparent 100%);
 }
+:root.light .hero-avatar::before { opacity: .6; }
 .float-sym {
   position: absolute; z-index: 2; font: 700 1.5rem/1 ui-monospace, Menlo, Consolas, monospace;
   color: #7cf0bd; text-shadow: 0 0 14px rgba(124, 240, 189, .55); pointer-events: none;
