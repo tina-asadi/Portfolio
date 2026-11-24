@@ -19,14 +19,19 @@
 .hero-card img { border-radius: 14px; }
 
 /* Animated cartoon portrait: gentle float, a pulsing glow and floating code symbols */
-.hero-avatar { position: relative; padding: .75rem; background: #0b0d16; border-color: rgba(106, 166, 255, .35); overflow: hidden; }
+.hero-avatar { position: relative; padding: 0; background: none; border: 0; box-shadow: none; border-radius: 0; }
 .hero-avatar::before {
-  content: ""; position: absolute; inset: -30%; z-index: 0;
+  content: ""; position: absolute; inset: -8%; z-index: 0; border-radius: 50%;
   background: radial-gradient(circle at 50% 55%, rgba(106, 166, 255, .35), rgba(124, 240, 189, .12) 40%, transparent 65%);
   animation: avatar-glow 5s ease-in-out infinite;
 }
 .avatar-frame { position: relative; z-index: 1; animation: avatar-float 6s ease-in-out infinite; }
-.avatar-frame img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.avatar-frame img {
+  display: block; width: 100%; height: auto; border-radius: 0;
+  /* No frame: the edges of the picture fade out softly into the page */
+  -webkit-mask-image: radial-gradient(closest-side, #000 62%, transparent 100%);
+          mask-image: radial-gradient(closest-side, #000 62%, transparent 100%);
+}
 .float-sym {
   position: absolute; z-index: 2; font: 700 1.5rem/1 ui-monospace, Menlo, Consolas, monospace;
   color: #7cf0bd; text-shadow: 0 0 14px rgba(124, 240, 189, .55); pointer-events: none;
